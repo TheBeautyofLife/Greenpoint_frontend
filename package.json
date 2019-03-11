@@ -9,15 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/samteb/vue-2-webpack-4-boilerplate"
+    "url": ""
   },
-  "author": "samteb <sam.teboul@gmail.com>",
+  "author": "stephanie kirathe <stephaniekirathe@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/samteb/vue-2-webpack-4-boilerplate",
+  "homepage": "",
   "dependencies": {
-    "@babel/polyfill": "~7.2",
-    "vue": "~2.6",
-    "vue-router": "~3.0"
+    "@babel/polyfill": "^7.2.5",
+    "lint": "^1.1.2",
+    "vue": "^2.6.8",
+    "vue-router": "^3.0.2"
   },
   "devDependencies": {
     "@babel/core": "~7.2",
