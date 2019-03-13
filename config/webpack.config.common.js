@@ -5,6 +5,7 @@ const HtmlPlugin           = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const helpers              = require('./helpers');
 const isDev                = process.env.NODE_ENV === 'development';
+const path                 = require('path');
 
 const webpackConfig = {
   entry: {
@@ -15,8 +16,9 @@ const webpackConfig = {
     extensions: [ '.js', '.vue' ],
     alias: {
       'vue$': isDev ? 'vue/dist/vue.runtime.js' : 'vue/dist/vue.runtime.min.js',
-      '@': helpers.root('src')
+      '@': helpers.root('src'),
     }
+
   },
   module: {
     rules: [
@@ -38,11 +40,30 @@ const webpackConfig = {
         ]
       },
       {
+          test: /\.(gif|png|jpe?g|svg)$/i,
+            use: [
+              'file-loader',
+              {
+                loader: 'image-webpack-loader',
+          options: {
+            bypassOnDebug:true,
+            disable: true
+
+          }
+        }]
+      },
+      {
         test: /\.scss$/,
         use: [
           isDev ? 'vue-style-loader' : MiniCSSExtractPlugin.loader,
           { loader: 'css-loader', options: { sourceMap: isDev } },
-          { loader: 'sass-loader', options: { sourceMap: isDev } }
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: isDev,
+              includePaths: [path.resolve(__dirname,'../node_modules')]
+            }
+          }
         ]
       },
       {

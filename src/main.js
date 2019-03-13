@@ -6,6 +6,17 @@ import VueRouter from 'vue-router';
 import App from './App';
 import routes from './routes';
 
+// Font awesome library
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faCoffee)
+
+Vue.component('fa-icon', FontAwesomeIcon)
+
+Vue.config.productionTip = false
+
 Vue.use(VueRouter);
 
 // Configure router
@@ -20,3 +31,12 @@ new Vue({
   render: h => h(App),
   router
 });
+
+
+new Vue({
+  el: '#app',
+  components: {
+    App
+  },
+  template: '<App/>'
+})

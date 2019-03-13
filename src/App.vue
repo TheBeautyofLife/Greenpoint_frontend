@@ -1,6 +1,20 @@
 <template>
-    <div>
-        <router-link to="/">Home</router-link> | <router-link to="/medium">Medium</router-link>
+<!-- These are the links -->
+    <div class="links">
+         <!-- <div><router-link to="/">Home</router-link> </div>
+       <router-link to="/signup"></router-link>
+        <router-link to="/signin"> Sign in</router-link>
+        <router-link to="/logout"> Logout</router-link>
+        <router-link to="/contactus"> Contact Us</router-link>
+        <router-link to="/faq"> FAQ</router-link>
+        <router-link to="/view_list"> View List</router-link>
+        <router-link to="/view_item"> View Item</router-link>
+        <router-link to="/cart_empty"> Cart empty</router-link>
+        <router-link to="/cart_full">Cart full</router-link> -->
+
+        
+       <headerComponent></headerComponent> 
         <router-view></router-view>
+       <footerComponent></footerComponent>
     </div>
 </template>

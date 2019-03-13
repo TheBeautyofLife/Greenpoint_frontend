@@ -1,0 +1,101 @@
+
+@import "colours_font.scss";
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700,900|Nunito:400,700,700i|Open+Sans:400,700');
+
+/*Global style*/
+
+body {
+    background-color: map-get($colours, gray-3);
+    font-family: 'Open sans 400',sans-serif;
+    margin: 0;
+    padding:0;
+
+}
+
+
+h1 {
+    color: map-get($colours, GP_orange);
+}
+
+.title {
+    h1 {
+        color: map-get($colours, GP_drkgreen);
+    }
+}
+
+.links {
+    router-link {
+        font-family: Arial, Helvetica, sans-serif;
+        color: map-get($colours, secondary);
+    }
+}
+
+/**** Header and footer *****/
+.head--container{
+    display: flex;
+    height: 100px;
+    background-color: map-get($colours, primary);
+}
+
+.logo--size{
+    width: 100px;
+    height: auto;
+    padding-top: 8px;
+    padding-left: 8px;
+}
+
+/* Top menu */
+
+
+.box {
+    display: flex;
+    margin: 30px auto;
+    padding-left:150px;
+    position: relative;
+    flex-direction: row;
+    justify-content:center;
+    height: 35px;
+}
+
+
+.search--bar-box{
+    position: relative;
+    background-color: map-get($colours, GP_litgreen_2);
+    width: 300px;
+    height: 35px;
+    padding: 17px;
+    border-style: none; 
+    align-items: center;
+
+}
+
+input::placeholder{
+    margin-left:10px;
+    color: map-get($colours, GP_drkgreen);
+    font-size: 0.70em;
+}
+
+ .box-1{
+    position: relative;
+    width: 34px;
+    background-color: map-get($colours, GP_litgreen);
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    }
+
+ .box-2{
+     display: flex;
+     width: 100px;
+     background-color: map-get($colours, GP_litgreen);
+     align-content: center;
+     align-items: center;
+     padding-left: 20px;
+     border-top-right-radius: 8px;
+     border-bottom-right-radius: 8px;
+
+
+    /*  font style */
+    font-size: 0.79em;
+    color: map-get($colours , primary );
+ }
