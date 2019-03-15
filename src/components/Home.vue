@@ -19,7 +19,7 @@
         <div id="active--user-icon">
            <span class="Usr--icon Usr--image"><fa-icon icon="user"/></span> 
            <span class="Usr--name Usr--name">My name </span> 
-
+           <span class="line"></span>
         </div>
         <!---------------------------------------------------------->
 
