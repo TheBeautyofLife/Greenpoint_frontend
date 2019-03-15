@@ -1,23 +1,30 @@
-// Import Vue
+// Import Vue and BootstrapVue
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import BootstrapVue from 'bootstrap-vue'
 
 // Import Vue App, routes, store
 import App from './App';
 import routes from './routes';
 
 // Font awesome library
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { library, config } from '@fortawesome/fontawesome-svg-core';
+import { faChevronDown, faSearch, faExclamationTriangle, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-library.add(faCoffee)
+// others supporting modules
 
-Vue.component('fa-icon', FontAwesomeIcon)
+library.add(faFacebookF, faTwitter, faChevronDown, faSearch, faExclamationTriangle, faUser);
 
-Vue.config.productionTip = false
+config.autoAddCss = true;
+
+Vue.component('fa-icon', FontAwesomeIcon);
+
+Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
+Vue.use(BootstrapVue);
 
 // Configure router
 const router = new VueRouter({

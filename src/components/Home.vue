@@ -1,5 +1,5 @@
 <template>
-<div class="Header--content">
+<div class="Main--content">
 
 <!-- Header content -->
 
@@ -8,21 +8,42 @@
         
         <div class="search-bar user-icon menu-dropdwn" id="top-menu">
             <div id="search--container search--icon" class="search--container box">
-                <span class="drpdwn--list box-1"><fa-icon class="head--icons" icon="angle-down" /></span>
+                <!--This is the drop down menu for the search option-->
+                <span class="drpdwn--list box-1"><fa-icon id= "dropdwn-s" icon="chevron-down" /></span>
                 <input type="search" class="search--bar-box" placeholder="Search for a product or parts... " />
-                <span class="search--icon box-2">Search </span>
+                <span class="search--icon box-2">Search  <fa-icon id="search--icon" icon="search"/> </span>
             </div>
+
+    <div class="user--container ">
+        <!-- This is the section where the users icon will appear-->
+        <div id="active--user-icon">
+           <span class="Usr--icon Usr--image"><fa-icon icon="user"/></span> 
+           <span class="Usr--name Usr--name">My name </span> 
+
+        </div>
+        <!---------------------------------------------------------->
+
+        <!-- Drop down menu-->
+       
+    </div>
+
         </div>
     </header>
     
 <!---- Header content ---->
 
 <!-- Main Section -->
+
+<!-- Error message for a page that is unavaliable -->
 <div id="main--box">
-    <h1>Home Page</h1>
-    <p class="para">This is the main page</p>
+    <fa-icon class="error--icon" icon="exclamation-triangle" />
+    <h1>Sorry, This page isn't avaliable</h1>
+    <p class="para">The link you followed may be broken, or that page may have been removed</p>
 </div>
-<!---- Main Section --->
+<!--------------------------------------------------->
+
+<!---- Main Section ---->
+
 </div>
 </template>
 
