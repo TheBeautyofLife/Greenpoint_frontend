@@ -66,6 +66,6 @@
 
 
 <style lang="scss">
-@import "../assets/css/_master.scss"
+@import "../assets/css/_signup-login-home.scss"
 </style>
 

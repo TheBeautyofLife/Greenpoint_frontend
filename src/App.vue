@@ -13,7 +13,7 @@
         <router-link to="/cart_full">Cart full</router-link> -->
 
         
-       <headerComponent></headerComponent> 
+      
         <router-view></router-view>
        <footerComponent></footerComponent>
     </div>
