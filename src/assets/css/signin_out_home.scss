@@ -1,0 +1,179 @@
+/********** Global Styles & Defaults ***********/
+
+@import "colours_font.scss";
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+*,
+**,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+    background-color: map-get($colours, primary);
+    font-family: 'Muli 400', sans-serif;
+    height: 100vh; //100% view height
+    width: 100vw; // 100% view width
+    overflow: scroll;
+}
+
+/*********** Register ************/
+
+.logo--top img {
+    position: absolute;
+    width: 154px;
+    height: 130px;
+    left: 50%;
+    margin-top: 30px;
+}
+
+#form--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 220px;
+    left: 24%;
+    max-width: 1200px;
+}
+
+.sec-1 {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec-3 {
+    display: flex;
+    flex-direction: column;
+    right: 20px;
+}
+
+//headers
+.headers-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 190px;
+    left: 24%;
+}
+
+//buttons
+button {
+    border-style: none;
+    height: 60px;
+    width: 500px;
+    margin: 10px;
+    padding: 10px;
+    background-color: map-get($colours, GP_litgreen);
+    border-radius: 5px;
+    box-shadow: inset 0 0.3em 1em -0.3em rgba(129, 129, 129, 0.15), inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.2s;
+    color: map-get($colours, primary);
+
+}
+
+button:hover {
+    background-color: map-get($colours, GP_drkgreen_1);
+}
+
+//Input box
+input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-style: none;
+    border-radius: 5px;
+    height: 60px;
+    width: 500px;
+    background-color: map-get($colours, GP_litgreen_2);
+    margin: 15px;
+    padding: 2px;
+    left: 0;
+}
+
+data-v-7040b622 {
+    border-style: none;
+}
+
+input:focus,
+.user--numeber:focus {
+    display: inline-block;
+    outline: none;
+    border: 2px solid;
+    border-color: map-get($colours, GP_litgreen);
+    border-radius: 10px;
+}
+
+//lable, font and tags
+label {
+    font-size: 16px;
+    margin-left: 16px;
+}
+
+.main--title {
+    color: map-get($colours, GP_orange);
+    font-weight: 200;
+}
+
+.sub--title {
+    color: map-get($colours, GP_drkgreen);
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.center--txt {
+    font-family: 'Muli';
+    font-weight: 200;
+    color: map-get($colours, GP_orange);
+}
+
+//input
+
+span .line-center {
+    padding-left: 50px;
+    justify-content: right;
+}
+
+//vertical line
+.vertical-line {
+    display: block;
+    height: 300px;
+    border-left: 1px solid;
+    border-color: map-get($colours, GP_drkgreen_1);
+    left: 12%;
+}
+
+//Social media icons
+.social-signup-buttons {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-size: 0.9em;
+}
+
+
+.social-icons {
+    width: 25px !important;
+    height: 25px !important;
+    margin-right: 30px;
+}
+
+
+/**************************/
