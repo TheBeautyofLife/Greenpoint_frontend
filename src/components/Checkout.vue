@@ -1,13 +1,13 @@
 <template>
 <div>
-    <h1>Cart full</h1>
+    <h1>Cart empty</h1>
     <p class="para">This is the main page</p>
 </div>
 </template>
 
 <script>
     export default {
-        name: 'Cart_full'
+        name: 'Checkout'
     }
 </script>
 

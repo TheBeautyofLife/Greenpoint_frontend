@@ -8,14 +8,29 @@ import App from './App';
 import routes from './routes';
 
 // Font awesome library
-import { library, config } from '@fortawesome/fontawesome-svg-core';
-import { faChevronDown, faSearch, faExclamationTriangle, faUser } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import {
+  library,
+  config
+} from '@fortawesome/fontawesome-svg-core';
+import {
+  faChevronDown,
+  faSearch,
+  faExclamationTriangle,
+  faUser
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faFacebookF,
+  faTwitter,
+  faGoogle,
+  faInstagram
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  FontAwesomeIcon
+} from '@fortawesome/vue-fontawesome';
 
 // others supporting modules
 
-library.add(faFacebookF, faTwitter, faChevronDown, faSearch, faExclamationTriangle, faUser);
+library.add(faFacebookF, faTwitter, faGoogle, faInstagram, faChevronDown, faSearch, faExclamationTriangle, faUser);
 
 config.autoAddCss = true;
 
