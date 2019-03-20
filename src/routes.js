@@ -4,8 +4,6 @@ const Sign_in = () => import('@/components/Sign_in');
 const Logout = () => import('@/components/Logout');
 const Contact_us = () => import('@/components/Contact_us');
 const FAQ = () => import('@/components/FAQ');
-const View_list = () => import('@/components/View_list');
-const View_item = () => import('@/components/View_item');
 const Cart = () => import('@/components/Cart');
 const Checkout = () => import('@/components/Checkout');
 
@@ -45,17 +43,8 @@ const routes = [{
     component: FAQ
   },
 
-  {
-    path: '/view_list',
-    name: 'View_list',
-    component: View_list
-  },
+  /* view items by category */
 
-  {
-    path: '/view_item',
-    name: 'View_item',
-    component: View_item
-  },
 
   {
     path: '/cart',

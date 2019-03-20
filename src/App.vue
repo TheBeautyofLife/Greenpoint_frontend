@@ -8,9 +8,7 @@
         <router-link to="/contactus"> Contact Us</router-link>
         <router-link to="/faq"> FAQ</router-link>
         <router-link to="/view_list"> View List</router-link>
-        <router-link to="/view_item"> View Item</router-link>
-        <router-link to="/cart_empty"> Cart empty</router-link>
-        <router-link to="/cart_full">Cart full</router-link> -->
+        <router-link to="/view_item"> View Item</router-link> -->
 
         
       
