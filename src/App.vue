@@ -10,9 +10,6 @@
         <router-link to="/view_list"> View List</router-link>
         <router-link to="/view_item"> View Item</router-link> -->
 
-        
-      
         <router-view></router-view>
-       <footerComponent></footerComponent>
     </div>
 </template>

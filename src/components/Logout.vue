@@ -1,5 +1,16 @@
 <template>
-    <h1>Logout</h1>
+ 
+<div class="Main--content">
+<headerComponent></headerComponent> 
+
+
+<!-- Main Section -->
+
+<errorComponent></errorComponent>
+
+<!---- Main Section ---->
+<footerComponent></footerComponent> 
+</div>
 </template>
 
 <script>

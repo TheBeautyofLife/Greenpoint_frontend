@@ -1,3 +1,4 @@
+/* Main */
 import Home from '@/components/Home';
 const Sign_up = () => import('@/components/Sign_up');
 const Sign_in = () => import('@/components/Sign_in');
@@ -6,6 +7,8 @@ const Contact_us = () => import('@/components/Contact_us');
 const FAQ = () => import('@/components/FAQ');
 const Cart = () => import('@/components/Cart');
 const Checkout = () => import('@/components/Checkout');
+const Post_item  = ()  => import('@/components/Post_item');
+
 
 const routes = [{
     path: '/',
@@ -56,7 +59,16 @@ const routes = [{
     path: '/checkout',
     name: 'Checkout',
     component: Checkout
+  },
+
+  {
+    path:'/post_item',
+    name: 'Post_item',
+    component: Post_item
   }
 ];
+
+
+
 
 export default routes;

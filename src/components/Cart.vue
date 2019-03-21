@@ -1,9 +1,18 @@
 <template>
-<div>
-    <h1>Cart full</h1>
-    <p class="para">This is the main page</p>
+ 
+<div class="Main--content">
+<headerComponent></headerComponent> 
+
+
+<!-- Main Section -->
+
+<errorComponent></errorComponent>
+
+<!---- Main Section ---->
+<footerComponent></footerComponent> 
 </div>
 </template>
+
 
 <script>
     export default {

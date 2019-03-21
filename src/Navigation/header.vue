@@ -2,7 +2,7 @@
 <!-- Header content -->
 
     <header class="head--container">
-        <div class='greenpoint-logo'><img src= "../assets/imgs/_logo.png" class="logo logo--size" /></div>
+        <div class='greenpoint-logo'><router-link to="/"> <img src= "../assets/imgs/_logo.png" class="logo logo--size" /> </router-link> </div>
         
         <div class="search-bar user-icon menu-dropdwn" id="top-menu">
             <div id="search--container search--icon" class="search--container box">
@@ -32,12 +32,12 @@
             <b-dropdown dropright variant="link" size="lg" no-caret>
                 <template slot="button-content"><fa-icon icon="chevron-down"></fa-icon></template>
 
-                <b-dropdown-item>Login</b-dropdown-item>
-                <b-dropdown-item>Register</b-dropdown-item>
-                 <b-dropdown-item>Post items</b-dropdown-item>
+                <b-dropdown-item> <router-link to="/signin" class="link2"> Login </router-link></b-dropdown-item>
+                <b-dropdown-item> <router-link to="/signup" class="link2"> Register </router-link></b-dropdown-item>
+                 <b-dropdown-item> <router-link to="/post_item" class="link2"> Post items </router-link></b-dropdown-item>
                 <b-dropdown-divider />
-                <b-dropdown-item>My account</b-dropdown-item>
-                <b-dropdown-item>Settings</b-dropdown-item>
+                <b-dropdown-item> My account </router-link></b-dropdown-item>
+                <b-dropdown-item> Settings </router-link></b-dropdown-item>
 
             </b-dropdown>
         </div>
