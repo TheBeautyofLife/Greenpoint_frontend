@@ -155,14 +155,50 @@ input:hover {
     color: map-get($colours, primary);
 }
 
-/* Rememeber to do the icon menu */
+/* icon menu */
+#active--user-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    max-width: 500px;
+    left: 70%;
+}
+
+.Usr--icon{
+display: flex;
+position: relative;
+background-color: map-get($colours, GP_litgreen_2 );
+height: 60px;
+width: 60px;
+border-radius: 30px;
+margin: 16px;
+align-content: center;
+justify-content: center;
+align-items: center;
+}
+
+.Usr--name{
+    font-size: 20px;
+}
+
+.faicon {
+    height: 75px;
+    width: 75px;
+}
+
+.drpdwn-usermenu{
+    color: map-get($colours, GP_litgreen_1 );
+}
+
 
 /* Navigation */
 
 .nav--container {
     display: flex;
     width: 100%;
-    height: 90px;
+    height: 80px;
     background-color: map-get($colours, primary);
     -webkit-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
     -moz-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
@@ -184,7 +220,7 @@ input:hover {
     margin-top: 25px;
 
 }
- 
+
 
 /* Links */
 .footer-main ul,
@@ -196,18 +232,19 @@ input:hover {
 }
 
 .link2 {
-color: map-get($colours, secondary);
+    color: map-get($colours, secondary);
 }
 
 
-.link:hover, .link2:hover{
+.link:hover,
+.link2:hover {
     text-decoration: none;
-    color: map-get($colours, GP_orange );
+    color: map-get($colours, GP_orange);
 }
 
 /* footer */
 
-.footer-main p{
+.footer-main p {
     font-size: 16px;
     font-weight: 700;
     padding-left: 20px;
@@ -220,4 +257,3 @@ color: map-get($colours, secondary);
     height: 56%;
     padding-left: 15px;
 }
-

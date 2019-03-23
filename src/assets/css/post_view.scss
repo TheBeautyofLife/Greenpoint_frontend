@@ -1,0 +1,20 @@
+*,
+**,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: map-get($colours, gray-3);
+    font-family: 'Open sans 400', sans-serif;
+    height: 100vh; //100% view height
+    width: 100vw; // 100% view width
+    overflow: scroll;
+}
+
+/*Content area style*/
+
+#

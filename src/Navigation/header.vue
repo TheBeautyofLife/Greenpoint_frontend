@@ -25,12 +25,12 @@
     <div class="user--container ">
         <!-- This is the section where the users icon will appear-->
         <div id="active--user-icon">
-           <div class="Usr--icon"><fa-icon icon="user"/></div> 
-           <div class="Usr--name Usr--name"> My name </div> 
-        </div>
-        <div>
-            <b-dropdown dropright variant="link" size="lg" no-caret>
-                <template slot="button-content"><fa-icon icon="chevron-down"></fa-icon></template>
+           <div class="Usr--icon"><fa-icon class="faicon" icon="user"/></div> 
+           <div class="Usr--name"> My name </div> 
+       
+            <div>
+            <b-dropdown variant="link" size="lg" no-caret>
+                <template  class="drpdwn-usermenu" slot="button-content"><fa-icon icon="chevron-down"></fa-icon></template>
 
                 <b-dropdown-item> <router-link to="/signin" class="link2"> Login </router-link></b-dropdown-item>
                 <b-dropdown-item> <router-link to="/signup" class="link2"> Register </router-link></b-dropdown-item>
@@ -40,7 +40,8 @@
                 <b-dropdown-item> Settings </router-link></b-dropdown-item>
 
             </b-dropdown>
-        </div>
+            </div>
+         </div>
         <!---------------------------------------------------------->
 
         <!-- Drop down menu-->
