@@ -156,30 +156,40 @@ input:hover {
 }
 
 /* icon menu */
-#active--user-icon{
+#active--user-icon {
     display: flex;
+    position: absolute;
     flex-direction: row;
     justify-content: center;
     align-content: center;
     align-items: center;
-    max-width: 500px;
-    left: 70%;
+    max-width: 250px;
+    left: 84%;
+    top: 2%;
 }
 
-.Usr--icon{
-display: flex;
-position: relative;
-background-color: map-get($colours, GP_litgreen_2 );
-height: 60px;
-width: 60px;
-border-radius: 30px;
-margin: 16px;
-align-content: center;
-justify-content: center;
-align-items: center;
+.drp-dwn-icon {
+    color: map-get($colours, GP_litgreen_1);
 }
 
-.Usr--name{
+.Usr--icon {
+    display: flex;
+    position: relative;
+    background-color: map-get($colours, GP_litgreen_2);
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    margin: 16px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    /*border*/
+    border-color: map-get($colours, GP_litgreen_1);
+
+}
+
+.Usr--name {
     font-size: 20px;
 }
 
@@ -188,21 +198,109 @@ align-items: center;
     width: 75px;
 }
 
-.drpdwn-usermenu{
-    color: map-get($colours, GP_litgreen_1 );
+.drpdwn-usermenu {
+    color: map-get($colours, GP_litgreen_1);
 }
 
 
 /* Navigation */
 
 .nav--container {
-    display: flex;
+    position: absolute;
     width: 100%;
     height: 80px;
     background-color: map-get($colours, primary);
     -webkit-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
     -moz-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
     box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
+}
+
+#main--nav {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#map--location {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    margin-top: 27px;
+    padding: 2px;
+    left: 7%;
+
+    p {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+
+
+    .icon {
+        height: 30px;
+        width: 30px;
+        color: map-get($colours, GP_orange);
+    }
+}
+
+#notification--bell {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    margin-top: 18px;
+    left: 32%;
+
+    .icon {
+        margin-top: 12px;
+        height: 28px;
+        width: 28px;
+        color: map-get($colours, GP_orange);
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 700;
+        margin-left: 9px;
+    }
+
+}
+
+#cart--item {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    margin-top: 18px;
+    padding-right: 60px;
+    right: 80px;
+
+    .icon {
+        margin-top: 12px;
+        height: 28px;
+        width: 28px;
+        color: map-get($colours, GP_orange);
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 700;
+        margin-left: 9px;
+    }
+}
+
+
+.bubble--item {
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-color: map-get($colours, GP_orange_2);
+    border: 2px solid;
+    border-color: map-get($colours, GP_orange);
+    border-radius: 20px;
+    align-items: center;
+    align-content: center;
+    bottom: 20px;
 }
 
 
@@ -218,7 +316,6 @@ align-items: center;
     display: flex;
     justify-content: space-evenly;
     margin-top: 25px;
-
 }
 
 

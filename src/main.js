@@ -16,7 +16,10 @@ import {
   faChevronDown,
   faSearch,
   faExclamationTriangle,
-  faUser
+  faUser,
+  faMapMarkerAlt,
+  faBell,
+  faShoppingCart
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebookF,
@@ -30,7 +33,7 @@ import {
 
 // others supporting modules
 
-library.add(faFacebookF, faTwitter, faGoogle, faInstagram, faChevronDown, faSearch, faExclamationTriangle, faUser);
+library.add(faFacebookF, faTwitter, faGoogle, faInstagram, faChevronDown, faSearch, faExclamationTriangle, faUser, faMapMarkerAlt, faBell, faShoppingCart);
 
 config.autoAddCss = true;
 

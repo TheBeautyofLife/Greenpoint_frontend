@@ -30,7 +30,7 @@
        
             <div>
             <b-dropdown variant="link" size="lg" no-caret>
-                <template  class="drpdwn-usermenu" slot="button-content"><fa-icon icon="chevron-down"></fa-icon></template>
+                <template  class="drpdwn-usermenu" slot="button-content"><fa-icon class="drp-dwn-icon"  icon="chevron-down"></fa-icon></template>
 
                 <b-dropdown-item> <router-link to="/signin" class="link2"> Login </router-link></b-dropdown-item>
                 <b-dropdown-item> <router-link to="/signup" class="link2"> Register </router-link></b-dropdown-item>
