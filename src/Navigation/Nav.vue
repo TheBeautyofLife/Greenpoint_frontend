@@ -9,7 +9,7 @@
         </div>
         <div class="info-map"><p>We deliver and collect, </p></div>
         <br /> 
-        <div id="long--lat"><b>location</b></div>
+        <div id="long--lat"><b> location</b></div>
       </div>
 
       <div id="notification--bell">

@@ -1,7 +1,8 @@
 // Import Vue and BootstrapVue
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import BootstrapVue from 'bootstrap-vue'
+import BootstrapVue from 'bootstrap-vue';
+
 
 // Import Vue App, routes, store
 import App from './App';
@@ -52,10 +53,9 @@ const router = new VueRouter({
 });
 
 new Vue({
-  el: '#app',
+  router,
   render: h => h(App),
-  router
-});
+}).$mount('#app');
 
 
 new Vue({

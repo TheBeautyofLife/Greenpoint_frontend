@@ -11,7 +11,7 @@ const Post_item  = ()  => import('@/components/Post_item');
 
 
 const routes = [{
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: Home
   },

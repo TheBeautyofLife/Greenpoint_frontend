@@ -1,3 +1,8 @@
+@import "colours_font.scss";
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+
 *,
 **,
 ::after,
@@ -13,6 +18,81 @@ body {
     height: 100vh; //100% view height
     width: 100vw; // 100% view width
     overflow: scroll;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
 }
 
 /*Content area style*/
+
+#container-center{
+    position: fixed;
+    display: flex;
+    background-color: map-get($colours, primary );
+    height: 100%;
+    width: 1500px;
+    left: 15%;
+    top: 20%;
+}
+
+
+
+#section--level{
+   position: relative;
+   display: flex;
+   margin-top: -4.3%;
+   left: 40%;
+   justify-content: space-between;
+   z-index: 3;
+   max-width: 400px;
+
+
+   .blob-active,
+   .blob_inactive {
+    position: relative;
+    display: block;
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+   }
+
+}
+
+
+ .blob-active{
+    left: 30%;
+    background-color: map-get($colours, GP_litgreen);
+ }
+ .blob_inactive{
+    left: 20%;
+    background-color: map-get($colours, gray-2);
+ }
+
+.post-item {
+    position: relative;
+    margin-top: 10%;
+    margin-left: 30%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.box-type1{
+    position: relative;
+    display: flex;
+    background-color: map-get($colours, GP_litgreen_2 );
+    width: 500px;
+    height: 40px;
+}
+
+.item--selector{
+    position: relative;
+    background-color: map-get($colours,GP_litgreen_2 );
+    border-style: none;
+    color: map-get($colours, GP_litgreen );
+    left: 100px;
+}
