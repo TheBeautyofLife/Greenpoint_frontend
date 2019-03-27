@@ -38,6 +38,7 @@
                 <b-dropdown-divider />
                 <b-dropdown-item> My account </router-link></b-dropdown-item>
                 <b-dropdown-item> Settings </router-link></b-dropdown-item>
+                 <b-dropdown-item @click="logout"> Logout </router-link></b-dropdown-item>
 
             </b-dropdown>
             </div>
@@ -52,11 +53,34 @@
     </header>
     
 <!---- Header content ---->
-
 </template>
+
+<script>
+
+import firebase from 'firebase';
+
+export default {
+    
+    data() {
+          return {}
+         },
+    methods:{
+        logout: function() {
+            firebase.auth().signOut().then(()=> {
+                this.$router.replace('/')
+            })
+            
+        }
+    }
+
+}
+</script>
+
+
 
 <style lang="scss">
 @import "../assets/css/_master.scss"
+
 
 </style>
 

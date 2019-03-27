@@ -27,7 +27,9 @@
     "latlon-geohash": "^1.1.0",
     "lint": "^1.1.2",
     "vue": "^2.6.9",
-    "vue-router": "^3.0.2"
+    "vue-router": "^3.0.2",
+    "vuefire": "^2.0.0-alpha.21",
+    "vuex": "^3.1.0"
   },
   "devDependencies": {
     "@babel/core": "~7.2",

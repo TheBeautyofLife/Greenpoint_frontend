@@ -20,13 +20,13 @@
       <div id="reg-card">
         <label class="descrption" for="email"> Email</label>
         <br/>
-        <input type="email" name="email" class="usr--email" />
+        <input type="email" v-model="email" class="usr--email" />
       </div>
 
       <div id="reg-card">
-        <label class="descrption" for="create-password"> Password</label>
+        <label class="descrption" for="password"> Password</label>
         <br/>
-        <input type="password" name="create-password" class="usr--password toggle-pass" />
+        <input type="password" v-model="password" class="usr--password toggle-pass" />
       </div>
     
         <div id="submit--bttn">
@@ -46,7 +46,8 @@
 <div id="Section" class="sec-3">
     <div class="social-signup-buttons">
       <h2 class="sub--title">With</h2>
-      <button id="social-butts google_g"> <fa-icon class="social-icons" :icon="['fab','google']" />  Sign up with Google </button> 
+      <button @click="SocialMedia" id="social-butts google_g"> <fa-icon class="social-icons" :icon="['fab','google']" />  Sign up with Google </button> 
+      <div class
     </div>
 </div>
 
@@ -58,15 +59,43 @@
 
 
 <script>
+import '../firebaseApp.js'
+
     export default {
         name: 'Signin',
          data() {
-          return {}
+          return {
+            email: '',
+            password:''
+          }
          },
           methods: {
-            login: function() {
-              this.$router.replace('/home');
-            } 
+            /** Login in with email and password **/
+            login() {
+              firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
+              (user) => { 
+                
+                
+                
+                
+                this.$router.replace('/'); 
+                }).catch((err) => {
+                /** Replace the alert message with the Greenponint alert component and firebase message **/
+                alert('Oh no! ' + err.message)
+              });
+            },
+
+             /** Login in with social media **/
+          SocialMedia(){
+            const GoogleProvider = new firebase.auth.GoogleAuthProvider();
+
+            firebase.auth().signInWithPopup(GoogleProvider).then((results) => {
+              this.$router.replace('/');
+            }).catch((err)=> {
+              alert('Gosh! there is a serious problem here' + err.message)
+            });
+          }   
+
           }
         }
 </script>

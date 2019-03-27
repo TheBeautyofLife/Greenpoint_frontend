@@ -4,9 +4,13 @@ import VueRouter from 'vue-router';
 import BootstrapVue from 'bootstrap-vue';
 
 
+
+
 // Import Vue App, routes, store
 import App from './App';
 import routes from './routes';
+import './firebaseApp';
+import  {store} from './store'
 
 // Font awesome library
 import {
@@ -54,14 +58,8 @@ const router = new VueRouter({
 
 new Vue({
   router,
-  render: h => h(App),
-}).$mount('#app');
+  store,
+  render: h => h(App)
+}).$mount('#app')
 
 
-new Vue({
-  el: '#app',
-  components: {
-    App
-  },
-  template: '<App/>'
-})

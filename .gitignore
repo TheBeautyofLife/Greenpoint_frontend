@@ -1,6 +1,17 @@
-.idea/
+
+.DS_Store
 .vscode/
 node_modules/
+.idea/
 dist/
 npm-debug.log
 package-lock.json
+
+
+#local environment files
+.env.local
+.env.*.local
+
+# log files
+npm-debug.log*
+
