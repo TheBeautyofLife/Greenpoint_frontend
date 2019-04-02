@@ -316,7 +316,7 @@ input:hover {
     background-color: map-get($colours, GP_litgreen);
     bottom: 0;
     left: 0;
-    margin-top: 2%;
+    margin-top: 10%;
 }
 
 .footer-main {
@@ -441,4 +441,10 @@ input:hover {
     width: 1500px;
     margin: 8px;
 }
+}
+
+.group2 {
+    display:flex;
+    position: relative;
+    top: 20%;
 }

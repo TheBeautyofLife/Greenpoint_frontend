@@ -26,7 +26,12 @@
     </b-carousel>
     </div>
 
-    <div class="left-newsletter">
+    <div class="left-newsletter"> 
+    <div id="news--title news--input"> 
+    <h3> New to GreenPoint</h3>
+    <p class="sub-title"> Sign up now to our newsletter!</p>
+
+    </div>
 
     </div>
 
@@ -44,14 +49,15 @@
   <div id="category-card-grp">
    <b-card-group> 
 
-     <b-card class="site-categories" title="Title" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top></b-card>
-     <b-card class="site-categories" title="Title" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top></b-card>
-     <b-card class="site-categories" title="Title" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top></b-card>
-     <b-card class="site-categories" title="Title" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top></b-card>
-     <b-card class="site-categories" title="Title" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top></b-card>
-    <b-card class="site-categories" title="Title" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top></b-card>
+     <b-card class="site-categories" title="Electronic parts" img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,h_300,w_400/v1554186893/Spare-parts-fridge-3__281_29.jpg" img-alt="Image" img-top></b-card>
+     <b-card class="site-categories" title="IT devices" img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,h_300/v1554116282/Lenovo_G500s_laptop-2905.jpg" img-alt="Image" img-top></b-card>
+     <b-card class="site-categories" title="Large household appliances" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top></b-card>
+     <b-card class="site-categories" title="Small household appliances" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top></b-card>
+     <b-card class="site-categories" title="Mobile phones | tablets "  img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_thumb,h_300,w_400/v1554186746/LG_G4-2.jpg" img-alt="Image" img-top></b-card>
+    <b-card class="site-categories" title="TVs | Entertainment devices" img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,h_300,w_400/v1554187811/SONIQ_-_TV_1.jpg" img-alt="Image" img-top></b-card>
   </b-card-group>
 </div>
+
 </div>
 <!-------------------------------------------------------->
 
