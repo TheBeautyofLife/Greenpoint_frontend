@@ -19,7 +19,6 @@ body {
     font-family: 'Open sans 400', sans-serif;
     height: 100vh; //100% view height
     width: 100vw; // 100% view width
-    overflow: scroll;
 }
 
 /*Content area style*/
@@ -64,7 +63,6 @@ body {
 
 .head--container {
     display: flex;
-    display: -webkit-sticky;
     width: 100%;
     height: 130px;
     background-color: map-get($colours, primary);
@@ -157,12 +155,10 @@ input:hover {
 }
 
 /* icon menu */
-.user--container{
-overflow: hidden;
-}
+
 #active--user-icon {
     display: flex;
-    position: fixed;
+    position: absolute;
     flex-direction: row;
     justify-content: center;
     align-content: center;
@@ -170,6 +166,7 @@ overflow: hidden;
     max-width: 250px;
     left: 84%;
     top: 2%;
+    overflow: hidden;
 }
 
 .drp-dwn-icon {
@@ -312,16 +309,19 @@ overflow: hidden;
 
 /* Footer */
 .foot--container {
-    position: absolute;
-    bottom: 0;
+    clear: both;
+    position: relative;
     width: 100%;
+    height: 190px;
     background-color: map-get($colours, GP_litgreen);
+    bottom: 0;
+    left: 0;
+    margin-top: 2%;
 }
 
 .footer-main {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 25px;
 }
 
 
@@ -329,6 +329,7 @@ overflow: hidden;
 .footer-main ul,
 .footer-main p,
 .link {
+    margin-top: 30px;
     list-style: none;
     color: map-get($colours, primary);
 
@@ -359,4 +360,85 @@ overflow: hidden;
     justify-content: space-around;
     height: 56%;
     padding-left: 15px;
+}
+
+
+/*** HOMEPAGE ***/
+#main-container {
+    display: flex;
+    position: relative;
+    width: 1700px;
+    background-color: map-get($colours, primary);
+    left: 10%;    
+    top: 2px;
+    flex-direction: row;
+}
+
+#main-container-others{
+    display: flex;
+    position: relative;
+    width: 1700px;
+    height: 460px;
+    background-color: map-get($colours, primary);
+    left: 10%;
+    top: 20px;
+}
+
+
+#adverts-more-info {
+    margin-top: 0px;
+    margin-right: 2px;
+    height: 460px;
+    width: 1300px;
+    background-color: map-get($colours, GP_litgreen_2);
+}
+
+.left-newsletter{
+    background-color: map-get($colours, primary);
+    margin-top: 0px;
+    height: 460px;
+    width: 400px;
+     -webkit-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
+     -moz-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
+     box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
+}
+
+#category--title {
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    
+
+    .category-title {
+     padding: 20px;
+     margin-left:50px;
+    }
+
+    .horizontal-line {
+        display: block;
+        width: 1700px;
+        border-top: 1px solid;
+        border-color: map-get($colours, gray-3);
+    }
+
+    h2{
+        
+       color: map-get($colours, GP_drkgreen);
+       font-weight: 300;
+       font-size: 2em
+    }
+}
+
+#category-card-grp{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    margin-top: 6%;
+    right: 95.5%;
+    
+.site-categories {
+    height: 140px;
+    width: 1500px;
+    margin: 8px;
+}
 }
