@@ -8,61 +8,67 @@ const FAQ = () => import('@/components/FAQ');
 const Cart = () => import('@/components/Cart');
 const Checkout = () => import('@/components/Checkout');
 const Post_item = () => import('@/components/Post_item');
-
+const How_it = () => import('@/components/How_it');
 
 const routes = [
-  
-    {
-      path: '/',
-      name: 'Home',
-      component: Home
-    },
 
-    {
-      path: '/signup',
-      name: 'Signup',
-      component: Sign_up
-    },
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
 
-    {
-      path: '/signin',
-      name: 'Signin',
-      component: Sign_in
-    },
+  {
+    path: '/signup',
+    name: 'Signup',
+    component: Sign_up
+  },
 
-    {
-      path: '/contactus',
-      name: 'Contact_us',
-      component: Contact_us
-    },
+  {
+    path: '/signin',
+    name: 'Signin',
+    component: Sign_in
+  },
 
-    {
-      path: '/faq',
-      name: 'Faq',
-      component: FAQ
-    },
+  {
+    path: '/contactus',
+    name: 'Contact_us',
+    component: Contact_us
+  },
 
-    /* view items by category */
+  {
+    path: '/faq',
+    name: 'Faq',
+    component: FAQ
+  },
+
+  /* view items by category */
 
 
-    {
-      path: '/cart',
-      name: 'Cart',
-      component: Cart
-    },
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: Cart
+  },
 
-    {
-      path: '/checkout',
-      name: 'Checkout',
-      component: Checkout
-    },
+  {
+    path: '/checkout',
+    name: 'Checkout',
+    component: Checkout
+  },
 
-    {
-      path: '/post_item',
-      name: 'Post_item',
-      component: Post_item
-    }
-  ]
+  {
+    path: '/post_item',
+    name: 'Post_item',
+    component: Post_item
+  },
+
+  {
+    path: '/how_it',
+    name: 'How_it',
+    component: How_it
+  }
+]
 
 
 
