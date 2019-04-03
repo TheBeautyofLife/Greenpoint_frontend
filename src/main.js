@@ -36,7 +36,10 @@ import {
   faMapMarkerAlt,
   faBell,
   faShoppingCart,
-  faUpload
+  faUpload,
+  faHeart,
+  faSmile,
+  faQuestionCircle
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebookF,
@@ -52,7 +55,8 @@ import {
 
 library.add(faFacebookF, faTwitter, faGoogle, faInstagram, 
   faChevronDown,faSearch, faExclamationTriangle, faUser, 
-  faMapMarkerAlt, faBell, faShoppingCart, faUpload);
+  faMapMarkerAlt, faBell, faShoppingCart, faUpload, faHeart,
+  faSmile, faQuestionCircle);
 
 config.autoAddCss = true;
 

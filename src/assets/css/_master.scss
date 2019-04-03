@@ -367,7 +367,7 @@ input:hover {
     height: 56%;
     padding-left: 15px;
 }
-
+/*** -----------------------------------------------------***/
 
 /*** HOMEPAGE ***/
 #main-container {
@@ -394,7 +394,7 @@ input:hover {
 #left-nav-menu{
     background-color: map-get($colours, primary);
     margin-top: 0px;
-    height: 500px;
+    height: 420px;
     width: 250px;
 
       /** first button **/
@@ -405,7 +405,7 @@ input:hover {
         justify-content: center;
         align-items: center;
         align-content: center;
-        height: 250px;
+        height: 210px;
         width: 250px;
         
     }
@@ -415,7 +415,7 @@ input:hover {
     }
     
     .icon1:hover{
-        background-color: map-get($colours, GP_orange_2);
+        background-color: map-get($colours, GP_orange_1);
     }
 
     .icon2{
@@ -436,6 +436,7 @@ input:hover {
         margin: 20px;
         padding-left: 9px;
         color: map-get($colours, primary);
+        
         font-family: 'Nunito', sans-serif;
         font-size: 19px;
         font-weight: 700;
@@ -446,7 +447,7 @@ input:hover {
 #adverts-more-info {
     margin-top: 0px;
     margin-right: 2px;
-    height: 500px;
+    height: 420px;
     width: 1090px;
     background-color: map-get($colours, GP_litgreen_2);
     -webkit-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
@@ -458,7 +459,7 @@ input:hover {
 #left-newsletter{
     background-color: map-get($colours, primary);
     margin-top: 0px;
-    height: 500px;
+    height: 420px;
     width: 370px;
      -webkit-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
      -moz-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
@@ -490,7 +491,7 @@ input:hover {
 }
 
 .send-email-to {
-    margin-top: 40px;
+    margin-top: 23px;
     margin-left: 30px;
     background-color: map-get($colours, GP_orange_1);
     font-size: 22px;
@@ -537,7 +538,6 @@ input:hover {
    -webkit-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
    -moz-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
    box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
-
     }
 
 #fun-info-icons{
@@ -545,13 +545,19 @@ input:hover {
     flex-direction: column;
     position: relative;
     margin-left: 35px;
-    margin-top: 40px;
 
     .elips-orng p{
         margin-left:20px;
     }
 }
 
+.funicon{
+    height: 50px;
+    width: 50px;
+    color: map-get($colours, primary);
+    margin-left: 18px;
+    padding-bottom: 4px;
+}
 
 
 #category--title {
@@ -602,4 +608,48 @@ input:hover {
     position: relative;
     top: 20%;
 }
+/*** -----------------------------------------------------***/
+/*** FAQ PAGE ***/
+
+#main--container{
+ display: flex;
+ position: relative;
+ width: 1700px;
+ background-color: map-get($colours, primary);
+ left: 10%;
+ top: 2px;
+ flex-direction: column;
+ justify-content: center;
+}
+
+#how-to-section {
+    display: flex;
+    position: relative;
+    height: 460px;
+    width: 1100px;
+    margin: 30px;
+    top: 20%;
+    background-color: map-get($colours, GP_orange);
+    left: 17%;
+
+}
+
+#buttons--selection{
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 2px;
+    padding-bottom: 20px;
+    
+    .buttons-x{
+        padding: 5px;
+        height: 80px;
+        width: 200px;
+        border-style: none;
+        background-color: map-get($colours, GP_orange_1);
+
+    }
+}
+
 

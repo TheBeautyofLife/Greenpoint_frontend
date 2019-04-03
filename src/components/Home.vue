@@ -1,5 +1,4 @@
 <template>
- 
 <div class="Main--content">
 <headerComponent/>
 
@@ -10,8 +9,8 @@
 <div id="main-container">
 
   <div id="left-nav-menu">
-   <router-link to="/post_item" class="link2"><div class="upload-ico icon1"> <fa-icon class="upload-icon" icon="upload" /> <p class="tradein-upload">Trade-in your device</p> </div></router-link> 
-   <router-link to="/post_item" class="link2"><div class="upload-ico icon2"> <fa-icon class="upload-icon" icon="upload" /> <p class="tradein-upload">Need Help?</p> </div></router-link> 
+   <router-link to="/how_it" class="link2"><div class="upload-ico icon1"> <fa-icon class="upload-icon" icon="upload" /> <p class="tradein-upload">Trade-in your device</p> </div></router-link> 
+   <router-link to="/faq" class="link2"><div class="upload-ico icon2"> <fa-icon class="upload-icon" icon="question-circle" /> <p class="tradein-upload">Need Help?</p> </div></router-link> 
   </div>
 
   <div id="carousel--info_ads">
@@ -37,8 +36,8 @@
     <input type="email" class="news--inemail" />
     </div>
     <div id="fun-info-icons">
-     <div class="nw"><span class="elips-orng smile--icon"></span><p>Updates & e-waste news</p></div>
-    <div class="nw"><span class="elips-orng heart--icon"></span><p>Amazing discounts! </p></div>
+     <div class="nw"><span class="elips-orng smile--icon"><fa-icon class="funicon" icon="heart" /></span><p>Updates & e-waste news</p></div>
+    <div class="nw"><span class="elips-orng heart--icon"><fa-icon class="funicon" icon="smile" /></span><p>Amazing discounts! </p></div>
     </div>
     <button class="send-email-to">Send</button>
 
@@ -66,8 +65,7 @@
      <b-card class="site-categories" title="Mobile phones | tablets "  img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_thumb,h_300,w_400/v1554186746/LG_G4-2.jpg" img-alt="Image" img-top></b-card>
     <b-card class="site-categories" title="TVs | Entertainment devices" img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,h_300,w_400/v1554187811/SONIQ_-_TV_1.jpg" img-alt="Image" img-top></b-card>
   </b-card-group>
-</div>
-
+  </div>
 </div>
 <!-------------------------------------------------------->
 
