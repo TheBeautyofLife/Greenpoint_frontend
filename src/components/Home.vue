@@ -51,7 +51,7 @@
 <div id="main-container-others">
 
   <div id="category--title">
-    <h2 class="category-title">Browse our categories</h2>
+    <h2 class="category-title">Browse Items You Have Posted</h2>
     <span class="horizontal-line"></span>
   </div>
 

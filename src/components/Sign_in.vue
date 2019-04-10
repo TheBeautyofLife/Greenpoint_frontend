@@ -94,7 +94,7 @@
         <div class="social-signup-buttons">
           <h2 class="sub--title">With</h2>
           <button @click="SocialMedia" id="social-butts google_g">
-            <fa-icon class="social-icons" :icon="['fab','google']"/>Sign up with Google
+            <fa-icon class="social-icons" :icon="['fab','google']"/>Sign in with Google
           </button>
         </div>
       </div>
@@ -105,6 +105,7 @@
 
 
 <script>
+import firebase from 'firebase/app'
 const vueonfire = require("../firebaseApp.js")
 
 export default {
@@ -176,17 +177,18 @@ export default {
 
     /** Login in with social media **/
     SocialMedia() {
-      const GoogleProvider = new firebase.auth.GoogleAuthProvider()
-    
-      vueonfire.auth.signInWithPopup(GoogleProvider).then((results) => {
+    const GoogleProvider = new firebase.auth.GoogleAuthProvider();
+
+   firebase.auth().signInWithPopup(GoogleProvider).then((results) => {
           this.performingRequest = false;
           this.$router.replace("/");
         }).catch((err) => {
-          console.log(err);
-          this.performingRequest = false;
-          this.errorMsg = err.message;
-        });
-    }
+          console.log(err)
+          this.performingRequest = false
+          this.errorMsg = err.message
+         })
+
+        }
   }
 };
 </script>

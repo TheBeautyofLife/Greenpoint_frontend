@@ -2,7 +2,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import BootstrapVue from 'bootstrap-vue';
-import Axios from 'axios'
+import Axios from 'axios';
 
 
 
@@ -15,37 +15,24 @@ import {
 
 
 //Axios for managing tokens- client side authenication
-/* Vue.prototype.&http = Axios
+ Vue.prototype.&http = Axios;
 
 const token = localStorage.getItem('token')
 if(token) {
   Vue.prototype.$http.defaults.headers.common['Authorization'] = token
 }
- */
+
 
 // Font awesome library
 import {
   library,
   config
 } from '@fortawesome/fontawesome-svg-core';
-import {
-  faChevronDown,
-  faSearch,
-  faExclamationTriangle,
-  faUser,
-  faMapMarkerAlt,
-  faBell,
-  faShoppingCart,
-  faUpload,
-  faHeart,
-  faSmile,
-  faQuestionCircle
+import { faChevronDown, faSearch, faExclamationTriangle, faUser,
+  faMapMarkerAlt, faBell, faShoppingCart, faUpload, faHeart,
+  faSmile, faQuestionCircle, faKeyboard,faCheckCircle
 } from '@fortawesome/free-solid-svg-icons';
-import {
-  faFacebookF,
-  faTwitter,
-  faGoogle,
-  faInstagram
+import { faFacebookF, faTwitter, faGoogle, faInstagram
 } from '@fortawesome/free-brands-svg-icons';
 import {
   FontAwesomeIcon
@@ -56,7 +43,7 @@ import {
 library.add(faFacebookF, faTwitter, faGoogle, faInstagram, 
   faChevronDown,faSearch, faExclamationTriangle, faUser, 
   faMapMarkerAlt, faBell, faShoppingCart, faUpload, faHeart,
-  faSmile, faQuestionCircle);
+  faSmile, faQuestionCircle, faKeyboard, faCheckCircle);
 
 config.autoAddCss = true;
 

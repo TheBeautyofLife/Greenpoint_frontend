@@ -28,27 +28,18 @@
         </b-form-group>
 
         <div id="product-type-manu">
-          <b-form-group
-            class="box-type1"
-            id="product-type"
-            label="Product Type*"
-            label-for="productInput2"
-          >
+          <b-form-group class="box-type2" id="product-type" label="Product Type*" label-for="productInput2">
             <b-form-select
               class="item--selector"
               id="productInput2"
-              :options="types"
+              type="text"
+              :options="type"
               required
               v-model="form.type"
             />
           </b-form-group>
 
-          <b-form-group
-            class="box-type2"
-            id="product-manu"
-            label="Product Manufacture*"
-            label-for="productInput3"
-          >
+          <b-form-group class="box-type2" id="product-manu" label="Product Manufacture*" label-for="productInput3">
             <b-form-input
               id="productInput3"
               type="text"
