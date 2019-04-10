@@ -75,8 +75,11 @@
 </template>
 
 <script>
+
 import headerComponent from '../Navigation/header'
 import footerComponent from '../Navigation/footer'
+
+
 
     export default {
         name: 'Home',
@@ -84,7 +87,8 @@ import footerComponent from '../Navigation/footer'
     components: {
     footerComponent,
     headerComponent
-  }
+  },
+
 
     }
 </script>

@@ -15,8 +15,8 @@
           <template slot="button-content">
             <fa-icon id="dropdwn-s" icon="chevron-down"/>
           </template>
-          <b-dropdown-item>Large household...</b-dropdown-item>
-          <b-dropdown-item>Small household...</b-dropdown-item>
+          <b-dropdown-item> TELEVISIONS </b-dropdown-item>
+          <b-dropdown-item> TELEVISION ACCESSORIES </b-dropdown-item>
           <b-dropdown-item>Information tech...</b-dropdown-item>
           <b-dropdown-item>Consumer equipment</b-dropdown-item>
           <b-dropdown-item>Lighting equipment</b-dropdown-item>
