@@ -322,7 +322,7 @@ input:hover {
     background-color: map-get($colours, GP_litgreen);
     bottom: 0;
     left: 0;
-    margin-top: 0.2%;
+    margin-top: 2%;
 }
 
 .footer-main {
@@ -385,7 +385,7 @@ input:hover {
     display: flex;
     position: relative;
     width: 1700px;
-    height: 500px;
+    height: 550px;
     background-color: map-get($colours, primary);
     left: 10%;
     top: 20px;
@@ -596,15 +596,36 @@ input:hover {
     margin-top: 6%;
     right: 95.5%;
 
-    .site-categories {
-        height: 140px;
-        width: 1500px;
-        margin: 8px;
-    }
+   
 
     .site-categories:hover {
         background-color: rgba(240, 248, 255, 0.379);
     }
+}
+ .site-categories {
+        height: 408px;
+        width: 1500px;
+        margin: 20px;
+        -webkit-box-shadow: 0px 1px 2px 0px rgba(40, 152, 72, 0.3);
+        -moz-box-shadow: 0px 1px 2px 0px rgba(40, 152, 72, 0.3);
+        box-shadow: 0px 1px 2px 0px rgba(40, 152, 72, 0.3);
+        color: map-get($colours, GP_drkgreen );
+    }
+
+.card-text{
+    color: map-get($colours, gray-1);
+}
+.btn--colour{
+    margin-top: 8px;
+    border-radius: 19px;
+    border-style: none;
+    width: 150px;
+    background-color: map-get($colours, GP_litgreen_2 );
+    font-size: 1.2em;
+    color: map-get($colours, GP_drkgreen );
+}
+.btn--arrow-right{
+    margin-left:13px;
 }
 
 .group2 {
@@ -695,8 +716,8 @@ input:hover {
     color: map-get($colours, primary );
     height: 60px;
     width: 60px;
-    margin-top: 28px;
-    margin-left: 42px;
+    margin-top: 24px;
+    margin-left: 40px;
 }
 
 .card1 {

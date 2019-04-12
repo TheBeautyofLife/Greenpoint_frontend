@@ -10,6 +10,26 @@ const Checkout = () => import('@/components/Checkout');
 const Post_item = () => import('@/components/Post_item');
 const How_it = () => import('@/components/How_it');
 
+
+/** These are the router for viewing the item by category **/
+/*----------IT DEVICES---------*/
+const Main_computer = () => import('@/components/View_items_category/IT/Main_comp');
+//Categories 
+const Laptops = () => import('@/components/View_items_category/IT/Laptops');
+const Computer_Acc = () => import('@/components/View_items_category/IT/Computer_Acc');
+
+//Subcategories for Laptop
+const Laptops = () => import('./components/View_items_category/IT/Laptops');
+
+/*----------TV & SOUND devices---------*/
+
+
+/*----------MOBILE DEVICES---------*/
+
+
+
+//Mobile and tablet devices
+
 const routes = [
 
   {
@@ -42,9 +62,6 @@ const routes = [
     component: FAQ
   },
 
-  /* view items by category */
-
-
   {
     path: '/cart',
     name: 'Cart',
@@ -67,7 +84,39 @@ const routes = [
     path: '/how_it',
     name: 'How_it',
     component: How_it
-  }
+  },
+
+
+  /* view items by category */
+
+  {
+    path: '/home/computer/',
+    name: 'Main_computer',
+    component: Main_computer
+  },
+  {
+    path: '/home/computer/laptops',
+    name: 'Laptops',
+    component: Laptops
+  },
+
+  /* SubCategory (TYPES) for laptops MacBooks, Netbooks, Ultrabooks */
+
+
+
+
+  {
+    path: '/home/computer/computer_accessories',
+    name: 'Computer_Acc',
+    component: Computer_Acc
+  },
+
+  /** SubCategories  Keyboards& Mouse, Monitors **/
+
+
+
+
+
 ]
 
 

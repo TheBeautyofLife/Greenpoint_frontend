@@ -63,8 +63,6 @@ Ultrabooks
 
 ## COMPUTER ACCESSORIES
 Webcams
-Desktop Accessories
-Laptop Bags
 Keyboards
 Mouse
 Monitors
@@ -73,12 +71,8 @@ Monitors
 ## COMPUTER DATA STORAGE
 External Hard Drives
 USB Flash Drives
-Memory Cards
 Solid State Drives
-PRINTERS & ACCESSORIES
-All-in-One Printers
-Computer Scanners
-Printer Ink & Toner
+
 
 ## LARGE APPLIANCES
 Fridges

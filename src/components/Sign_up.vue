@@ -128,6 +128,7 @@ data() {
     const GoogleProvider = new firebase.auth.GoogleAuthProvider();
 
    firebase.auth().signInWithPopup(GoogleProvider).then((results) => {
+          console.log(results)
           this.performingRequest = false;
           this.$router.replace("/");
         }).catch((err) => {

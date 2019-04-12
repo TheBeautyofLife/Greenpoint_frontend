@@ -17,7 +17,7 @@ import {
 } from '@fortawesome/fontawesome-svg-core';
 import { faChevronDown, faSearch, faExclamationTriangle, faUser,
   faMapMarkerAlt, faBell, faShoppingCart, faUpload, faHeart,
-  faSmile, faQuestionCircle, faKeyboard,faCheckCircle
+  faSmile, faQuestionCircle, faKeyboard,faCheckCircle,faArrowRight
 } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faGoogle, faInstagram
 } from '@fortawesome/free-brands-svg-icons';
@@ -30,7 +30,7 @@ import {
 library.add(faFacebookF, faTwitter, faGoogle, faInstagram, 
   faChevronDown,faSearch, faExclamationTriangle, faUser, 
   faMapMarkerAlt, faBell, faShoppingCart, faUpload, faHeart,
-  faSmile, faQuestionCircle, faKeyboard, faCheckCircle);
+  faSmile, faQuestionCircle, faKeyboard, faCheckCircle, faArrowRight);
 
 config.autoAddCss = true;
 

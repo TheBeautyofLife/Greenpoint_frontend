@@ -75,19 +75,19 @@
      img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,h_300/v1554116282/Lenovo_G500s_laptop-2905.jpg" 
      img-alt="Image" img-top>
        <b-card-text>
-        View all laptops, destops and IT accessories you have posted... 
+        View all the parts you have posted, modify posts... 
        </b-card-text>
        <b-button class="btn--colour"> More <fa-icon class="btn--arrow-right" icon="arrow-right"/> </b-button>
      </b-card>
 
      <!-- card one -->
      <b-card class="site-categories" 
-     title="All Appliances" 
+     title="Large Appliances" 
      img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,h_300/v1554194210/greenpoint/9274803316_aa60eda69e_b.jpg" 
      img-alt="Image" 
      img-top>
      <b-card-text class="card-text">
-        View all the parts you have Home appliance you posted... 
+        View all the parts you have posted, modify posts... 
        </b-card-text>
        <b-button class="btn--colour"> More <fa-icon class="btn--arrow-right" icon="arrow-right"/></b-button>
      </b-card>

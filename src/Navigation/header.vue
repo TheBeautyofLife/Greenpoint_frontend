@@ -17,11 +17,13 @@
           </template>
           <b-dropdown-item> TELEVISIONS </b-dropdown-item>
           <b-dropdown-item> TELEVISION ACCESSORIES </b-dropdown-item>
-          <b-dropdown-item>Information tech...</b-dropdown-item>
-          <b-dropdown-item>Consumer equipment</b-dropdown-item>
-          <b-dropdown-item>Lighting equipment</b-dropdown-item>
-          <b-dropdown-item>Electrical and...</b-dropdown-item>
-          <b-dropdown-item>Monitoring and...</b-dropdown-item>
+          <b-dropdown-item> MUSICAL INSTRUMENT & SONO </b-dropdown-item>
+          <b-dropdown-item> CAMERAS </b-dropdown-item>
+          <b-dropdown-item> MOBILE PHONES AND TABLETS </b-dropdown-item>
+          <b-dropdown-item> TOWERS AND LAPTOPS </b-dropdown-item>
+          <b-dropdown-item>COMPUTER ACCESSORIES AND STORAGE</b-dropdown-item>
+          <b-dropdown-item> LARGE APPLIANCES </b-dropdown-item>
+          <b-dropdown-item> SMALL APPLIANCES AND COOKING APPLIANCES</b-dropdown-item>
         </b-dropdown>
 
         <input
