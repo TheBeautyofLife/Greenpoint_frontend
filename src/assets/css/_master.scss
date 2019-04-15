@@ -15,7 +15,7 @@
 
 html,
 body {
-    background-color: map-get($colours, gray-3);
+    background-color: map-get($colours, gray-2);
     font-family: 'Open sans 400', sans-serif;
     height: 100vh; //100% view height
     width: 100vw; // 100% view width
@@ -319,7 +319,7 @@ input:hover {
     position: relative;
     width: 100%;
     height: 190px;
-    background-color: map-get($colours, GP_litgreen);
+    background-color: map-get($colours, GP_drkgreen-footer);
     bottom: 0;
     left: 0;
     margin-top: 2%;
@@ -357,7 +357,7 @@ input:hover {
 .footer-main p {
     font-size: 16px;
     font-weight: 700;
-    padding-left: 20px;
+    padding-left: 37px;
 }
 
 .social-icons ul {
@@ -365,7 +365,7 @@ input:hover {
     flex-direction: row;
     justify-content: space-around;
     height: 56%;
-    padding-left: 15px;
+    padding-left: 35px;
 }
 
 /*** -----------------------------------------------------***/
@@ -381,6 +381,16 @@ input:hover {
     flex-direction: row;
 }
 
+#need-help {
+    display: flex;
+    position: relative;
+    width: 1700px;
+    height: 280px;
+    background-color: map-get($colours, primary);
+    left: 10%;
+    top: 20px;
+}
+
 #main-container-others {
     display: flex;
     position: relative;
@@ -388,74 +398,27 @@ input:hover {
     height: 550px;
     background-color: map-get($colours, primary);
     left: 10%;
+    top: 40px;
+}
+
+#get-started{
+    display: flex;
+    position: relative;
+    width: 1700px;
+    height: 400px;
+    background: url(/imgs/bg_2.jpeg);
+    left: 10%;
     top: 20px;
 }
 
 /** Top left navigation**/
-#left-nav-menu {
-    background-color: map-get($colours, primary);
-    margin-top: 0px;
-    height: 420px;
-    width: 250px;
 
-    /** first button **/
-    .upload-ico {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        height: 210px;
-        width: 250px;
-
-    }
-
-    .icon1 {
-        background-color: map-get($colours, GP_orange);
-    }
-
-    .icon1:hover {
-        background-color: map-get($colours, GP_orange_1);
-    }
-
-    .icon2 {
-        background-color: map-get($colours, GP_blue);
-    }
-
-    .icon2:hover {
-        background-color: map-get($colours, GP_blue_1);
-    }
-
-    /** User icon**/
-    .upload-icon {
-        height: 50px;
-        width: 50px;
-        padding-bottom: 5px;
-        color: map-get($colours, primary);
-    }
-
-    .tradein-upload {
-        margin: 20px;
-        padding-left: 9px;
-        color: map-get($colours, primary);
-
-        font-family: 'Nunito', sans-serif;
-        font-size: 19px;
-        font-weight: 700;
-        font-style: italic;
-    }
-}
 
 #adverts-more-info {
     margin-top: 0px;
     margin-right: 2px;
     height: 420px;
     width: 1090px;
-    background-color: map-get($colours, GP_litgreen_2);
-    -webkit-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
-    -moz-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
-    box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
 }
 
 /*** left nav***/
@@ -463,24 +426,21 @@ input:hover {
     background-color: map-get($colours, primary);
     margin-top: 0px;
     height: 420px;
-    width: 370px;
-    -webkit-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
-    -moz-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
-    box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
+    width: 550px;
 
     .news--inemail,
     .send-email-to {
         border-style: none;
         border-radius: 10px;
         height: 48px;
-        width: 300px;
+        width: 400px;
     }
 
 }
 
 .news--title,
 .news--input {
-    margin-left: 30px;
+    margin-left: 100px;
     padding-top: 34px;
 }
 
@@ -495,7 +455,7 @@ input:hover {
 
 .send-email-to {
     margin-top: 23px;
-    margin-left: 30px;
+    margin-left: 100px;
     background-color: map-get($colours, GP_orange_1);
     font-size: 22px;
 
@@ -548,7 +508,7 @@ input:hover {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-left: 35px;
+    margin-left: 100px;
 
     .elips-orng p {
         margin-left: 20px;
@@ -563,7 +523,6 @@ input:hover {
     padding-bottom: 1px;
 }
 
-
 #category--title {
     display: flex;
     flex-direction: column;
@@ -571,19 +530,18 @@ input:hover {
 
     .category-title {
         padding: 20px;
-        margin-left: 50px;
+        margin-left: 70px;
     }
 
     .horizontal-line {
         display: block;
         width: 1700px;
-        border-top: 1px solid;
-        border-color: map-get($colours, gray-3);
+        border-top: none;
     }
 
     h2 {
 
-        color: map-get($colours, GP_drkgreen);
+        color: map-get($colours, GP_orange);
         font-weight: 300;
         font-size: 2em
     }
@@ -594,44 +552,52 @@ input:hover {
     position: relative;
     flex-direction: row;
     margin-top: 6%;
-    right: 95.5%;
-
-   
+    right: 90%;
 
     .site-categories:hover {
         background-color: rgba(240, 248, 255, 0.379);
     }
 }
- .site-categories {
-        height: 408px;
-        width: 1500px;
-        margin: 20px;
-        -webkit-box-shadow: 0px 1px 2px 0px rgba(40, 152, 72, 0.3);
-        -moz-box-shadow: 0px 1px 2px 0px rgba(40, 152, 72, 0.3);
-        box-shadow: 0px 1px 2px 0px rgba(40, 152, 72, 0.3);
-        color: map-get($colours, GP_drkgreen );
-    }
 
-.card-text{
+.site-categories {
+    height: 408px;
+    width: 1200px;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: map-get($colours, GP_drkgreen);
+}
+
+.card-text {
     color: map-get($colours, gray-1);
 }
-.btn--colour{
+
+.card-title{
+    margin-left: 24px;
+}
+
+.btn--colour {
     margin-top: 8px;
+    margin-left: 35px;
     border-radius: 19px;
     border-style: none;
     width: 150px;
-    background-color: map-get($colours, GP_litgreen_2 );
+    background-color: map-get($colours, GP_orange_2);
     font-size: 1.2em;
-    color: map-get($colours, GP_drkgreen );
+    color: map-get($colours, GP_drkgreen);
 }
-.btn--arrow-right{
-    margin-left:13px;
+
+.btn--arrow-right {
+    margin-left: 13px;
 }
 
 .group2 {
     display: flex;
     position: relative;
     top: 20%;
+}
+
+.card {
+    border: 1px solid rgba(225, 225, 225, 0.781)
 }
 
 /*** -----------------------------------------------------***/
@@ -657,7 +623,7 @@ input:hover {
     width: 1400px;
     margin-bottom: 30px;
     top: 20%;
-    background-color: map-get($colours, gray-3);
+    background-color: map-get($colours, gray-2);
     left: 9%;
     justify-content: center;
 
@@ -712,8 +678,8 @@ input:hover {
     width: 2em;
 }
 
-.icon-center{
-    color: map-get($colours, primary );
+.icon-center {
+    color: map-get($colours, primary);
     height: 60px;
     width: 60px;
     margin-top: 24px;
@@ -759,9 +725,12 @@ input:hover {
     }
 }
 
-.more1, .more2, .more3{
+.more1,
+.more2,
+.more3 {
     right: 54%;
 }
+
 /*** Section II, these are the redirect buttons where the 
 user can click and go to the required pages ***/
 
@@ -809,3 +778,86 @@ user can click and go to the required pages ***/
     margin-top: 8%;
     margin-bottom: 5%
 }
+
+
+/** Viewing item post **/
+
+#main-container-items {
+    display: flex;
+    position: relative;
+    width: 1500px;
+    height: 100%;
+    background-color: map-get($colours, primary);
+    left: 23%;
+    top: -710px;
+}
+
+
+
+#item-card-grp {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    right: 0;
+
+    .site-categories:hover {
+        background-color: rgba(240, 248, 255, 0.379);
+    }
+}
+
+//this is to align the items in each column
+.align--row {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-cards {
+    height: 450px;
+    width: 700px;
+    margin: 30px;
+    color: map-get($colours, GP_drkgreen);
+}
+
+#top-breadcrums {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 14%;
+    background-color: map-get($colours, GP_orange_1);
+    margin: 40px;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
+    justify-content: center;
+    align-content: center;
+
+    .txt {
+        font-size: 1.4em;
+        font-weight: 500;
+        padding: 5px;
+        margin-top: 9px;
+        margin-left: 5px;
+    }
+}
+
+.active-link {
+    display: flex;
+    width: 80px;
+    height: 40px;
+    background-color: map-get($colours, gray-2);
+    border-radius: 30px;
+    justify-content: center;
+    align-content: center;
+}
+
+#nav-left {
+    display: flex;
+    position: relative;
+    width: 420px;
+    height: 700px;
+    background-color: map-get($colours, primary);
+    left: 2%;
+    top: 9px;
+}
+
+
+//note this is the item selector in the post product section

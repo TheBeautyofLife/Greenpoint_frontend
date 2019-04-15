@@ -23,11 +23,11 @@
             type="text"
             v-model="form.title"
             required
-            placeholder="What is the name of the product?"
           />
         </b-form-group>
 
-        <div id="product-type-manu">
+
+      <div class="product-type-manu">
           <b-form-group class="box-type2" id="product-type" label="Product Type*" label-for="productInput2">
             <b-form-select
               class="item--selector"
@@ -39,15 +39,15 @@
             />
           </b-form-group>
 
-          <b-form-group class="box-type2" id="product-manu" label="Product Manufacture*" label-for="productInput3">
+          <b-form-group class="box-type2 " id="product-manu" label="Product Manufacture*" label-for="productInput3">
             <b-form-input
               id="productInput3"
               type="text"
               v-model="form.manu"
               required
-              placeholder="Who is the manufacturer of the product?"
             />
           </b-form-group>
+      </div>
 
           <b-form-group class="box-type2" id="product-year" label="Year*" label-for="productInput4">
             <b-form-select
@@ -56,10 +56,21 @@
               type="text"
               :options="year"
               required
-              v-model="form.year"
-            />
+              v-model="form.year"/>
           </b-form-group>
-        </div>
+       
+       <div class="horizontal-line"></div>
+
+       <b-form-group class="box-type2 " id="product-functional" label="List key functional features*" label-for="productInput5">
+            <b-form-textarea
+              id="productInput5"
+              type="text"
+              v-model="form.functional"
+              rows="3"
+              max-rows="6"/>
+      </b-form-group>
+
+
       </b-form>
     </div>
 
@@ -77,6 +88,7 @@ export default {
     return {
       form: {
         title: "",
+        manu: "",
         type: null,
         year: null
       },
