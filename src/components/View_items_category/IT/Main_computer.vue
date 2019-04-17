@@ -14,10 +14,7 @@
 </div>
 
 
-
-<div id="nav-left">
- <h1>Nav</h1>
-</div>
+<filternavComponent></filternavComponent>
 
 <!-- Main bottom nav -->
 
@@ -36,7 +33,7 @@
         Lorem ipsum dolor sit amet, consectetur... 
        </b-card-text>
 
-       <b-button class="btn--colour"> More <fa-icon class="btn--arrow-right" icon="arrow-right"/> </b-button>
+       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
        </b-card>
     <!-- card one -->
      <b-card class="item-cards" 
@@ -46,7 +43,7 @@
        <b-card-text>
         View all laptops, destops and IT accessories you have posted... 
        </b-card-text>
-       <router-link to="#" class="link2"><b-button class="btn--colour"> More <fa-icon class="btn--arrow-right" icon="arrow-right"/> </b-button></router-link>
+       <router-link to="#" class="link2"><router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link></router-link>
      </b-card>
 
      <!-- card one -->
@@ -58,7 +55,7 @@
      <b-card-text class="card-text">
         View all the parts you have Home appliance you posted... 
        </b-card-text>
-       <b-button class="btn--colour"> More <fa-icon class="btn--arrow-right" icon="arrow-right"/></b-button>
+       <b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/></b-button>
      </b-card>
 
      <b-card class="item-cards" 
@@ -68,12 +65,12 @@
      <b-card-text>
         View all the parts you have posted, modify posts... 
      </b-card-text>
-       <b-button class="btn--colour"> More <fa-icon class="btn--arrow-right" icon="arrow-right"/> </b-button>
+       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
      </b-card>
   </b-card-group>
   </div>
 
-<!-- card category group 1 -->
+<!-- card category group 2 -->
    <div id="item-card-grp" class="align--row">
    <b-card-group> 
     <!-- card one -->
@@ -85,7 +82,7 @@
         Lorem ipsum dolor sit amet, consectetur... 
        </b-card-text>
 
-       <b-button class="btn--colour"> More <fa-icon class="btn--arrow-right" icon="arrow-right"/> </b-button>
+       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
        </b-card>
     <!-- card two -->
      <b-card class="item-cards" 
@@ -95,7 +92,7 @@
        <b-card-text>
         View all laptops, destops and IT accessories you have posted... 
        </b-card-text>
-       <router-link to="#" class="link2"><b-button class="btn--colour"> More <fa-icon class="btn--arrow-right" icon="arrow-right"/> </b-button></router-link>
+       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
      </b-card>
 
      <!-- card three -->
@@ -107,7 +104,7 @@
      <b-card-text class="card-text">
         View all the parts you have Home appliance you posted... 
        </b-card-text>
-       <b-button class="btn--colour"> More <fa-icon class="btn--arrow-right" icon="arrow-right"/></b-button>
+       <b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/></b-button>
      </b-card>
 
     <!-- card four -->
@@ -118,12 +115,168 @@
      <b-card-text>
         View all the parts you have posted, modify posts... 
      </b-card-text>
-       <b-button class="btn--colour"> More <fa-icon class="btn--arrow-right" icon="arrow-right"/> </b-button>
+       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
      </b-card>
   </b-card-group>
   </div>
+
+
+  <!-- card category group 3 -->
+   <div id="item-card-grp" class="align--row">
+   <b-card-group> 
+    <!-- card one -->
+     <b-card class="item-cards"
+       title="Electronic parts" 
+       img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,w_300/v1555073762/greenpoint/placeholder.png" 
+       img-alt="Image" img-top>
+       <b-card-text>
+        Lorem ipsum dolor sit amet, consectetur... 
+       </b-card-text>
+
+       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
+       </b-card>
+    <!-- card two -->
+     <b-card class="item-cards" 
+     title="IT devices" 
+     img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,w_300/v1555073762/greenpoint/placeholder.png" 
+     img-alt="Image" img-top>
+       <b-card-text>
+        View all laptops, destops and IT accessories you have posted... 
+       </b-card-text>
+       <router-link to="#" class="link2"><router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link></router-link>
+     </b-card>
+
+     <!-- card three -->
+     <b-card class="item-cards" 
+     title="All Appliances" 
+     img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,w_300/v1555073762/greenpoint/placeholder.png" 
+     img-alt="Image" 
+     img-top>
+     <b-card-text class="card-text">
+        View all the parts you have Home appliance you posted... 
+       </b-card-text>
+       <b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/></b-button>
+     </b-card>
+
+    <!-- card four -->
+     <b-card class="item-cards" 
+     title="Phones & Tablets "  
+     img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,w_300/v1555073762/greenpoint/placeholder.png" 
+     img-alt="Image" img-top>
+     <b-card-text>
+        View all the parts you have posted, modify posts... 
+     </b-card-text>
+       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
+     </b-card>
+  </b-card-group>
+  </div>
+
+
+ <!-- card category group 4 -->
+   <div id="item-card-grp" class="align--row">
+   <b-card-group> 
+    <!-- card one -->
+     <b-card class="item-cards"
+       title="Electronic parts" 
+       img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,w_300/v1555073762/greenpoint/placeholder.png" 
+       img-alt="Image" img-top>
+       <b-card-text>
+        Lorem ipsum dolor sit amet, consectetur... 
+       </b-card-text>
+
+       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
+       </b-card>
+    <!-- card two -->
+     <b-card class="item-cards" 
+     title="IT devices" 
+     img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,w_300/v1555073762/greenpoint/placeholder.png" 
+     img-alt="Image" img-top>
+       <b-card-text>
+        View all laptops, destops and IT accessories you have posted... 
+       </b-card-text>
+       <router-link to="#" class="link2"><router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link></router-link>
+     </b-card>
+
+     <!-- card three -->
+     <b-card class="item-cards" 
+     title="All Appliances" 
+     img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,w_300/v1555073762/greenpoint/placeholder.png" 
+     img-alt="Image" 
+     img-top>
+     <b-card-text class="card-text">
+        View all the parts you have Home appliance you posted... 
+       </b-card-text>
+       <b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/></b-button>
+     </b-card>
+
+    <!-- card four -->
+     <b-card class="item-cards" 
+     title="Phones & Tablets "  
+     img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,w_300/v1555073762/greenpoint/placeholder.png" 
+     img-alt="Image" img-top>
+     <b-card-text>
+        View all the parts you have posted, modify posts... 
+     </b-card-text>
+       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
+     </b-card>
+  </b-card-group>
+  </div>
+
+
+   <!-- card category group 5 -->
+   <div id="item-card-grp" class="align--row">
+   <b-card-group> 
+    <!-- card one -->
+     <b-card class="item-cards"
+       title="Electronic parts" 
+       img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,w_300/v1555073762/greenpoint/placeholder.png" 
+       img-alt="Image" img-top>
+       <b-card-text>
+        Lorem ipsum dolor sit amet, consectetur... 
+       </b-card-text>
+
+       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
+       </b-card>
+    <!-- card two -->
+     <b-card class="item-cards" 
+     title="IT devices" 
+     img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,w_300/v1555073762/greenpoint/placeholder.png" 
+     img-alt="Image" img-top>
+       <b-card-text>
+        View all laptops, destops and IT accessories you have posted... 
+       </b-card-text>
+       <router-link to="#" class="link2"><router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link></router-link>
+     </b-card>
+
+     <!-- card three -->
+     <b-card class="item-cards" 
+     title="All Appliances" 
+     img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,w_300/v1555073762/greenpoint/placeholder.png" 
+     img-alt="Image" 
+     img-top>
+     <b-card-text class="card-text">
+        View all the parts you have Home appliance you posted... 
+       </b-card-text>
+       <b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/></b-button>
+     </b-card>
+
+    <!-- card four -->
+     <b-card class="item-cards" 
+     title="Phones & Tablets "  
+     img-src="https://res.cloudinary.com/drsayrtmp/image/upload/c_scale,w_300/v1555073762/greenpoint/placeholder.png" 
+     img-alt="Image" img-top>
+     <b-card-text>
+        View all the parts you have posted, modify posts... 
+     </b-card-text>
+       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
+     </b-card>
+  </b-card-group>
+  </div>
+<!-------------------------------------------------------->
+
 </div>
 <!-------------------------------------------------------->
+
 
 <!---- Main Section ---->
 <footerComponent/>
@@ -134,7 +287,8 @@
 
 import headerComponent from '../../../Navigation/header'
 import footerComponent from '../../../Navigation/footer'
-
+import filternavComponent from '../../../Navigation/computer-filter/filter-nav'
+import breadcrumbComponent from '../../../Navigation/computer-filter/breadcrumb';
 
 
     export default {
@@ -142,7 +296,9 @@ import footerComponent from '../../../Navigation/footer'
     
     components: {
     footerComponent,
-    headerComponent
+    headerComponent,
+    filternavComponent,
+    breadcrumbComponent
   },
 
 

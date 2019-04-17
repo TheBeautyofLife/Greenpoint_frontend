@@ -93,7 +93,7 @@ import headerComponent from "../Navigation/header";
 import footerComponent from "../Navigation/footer";
 
 export default {
-  name: "/how_it",
+  name: "How_it",
 
   components: {
     headerComponent,

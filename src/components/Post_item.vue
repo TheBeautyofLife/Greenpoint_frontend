@@ -4,7 +4,9 @@
     <navComponent></navComponent>
     <!-- Main Section -->
 
+
     <div id="section--level">
+    
       <div class="postingItem-1">
         <span class="blob-active"></span>
         <p>Product Information</p>
@@ -16,7 +18,7 @@
     </div>
 
     <div id="container-center">
-      <b-form class="post-item" @submit="onSubmit" @reset="onReset" v-if="show">
+      <b-form class="post-item" @submit.prevent="onSubmit" @reset="onReset" v-if="show">
         <b-form-group id="product-title" label="Product Title *" label-for="productInput1">
           <b-form-input
             id="productInput1"
@@ -70,7 +72,8 @@
               max-rows="6"/>
       </b-form-group>
 
-
+          <button type="submit" class="buttons-x btn-help">submit</button>
+          <button type="text" class="buttons-x btn-help">reset</button>
       </b-form>
     </div>
 
@@ -79,19 +82,31 @@
 </template>
 
 <script>
+import axios from 'axios';
+import {APIService} from '../APIservice';
+
+const API_URL = 'http://3622174d.ngrok.io';
+const apiService = new APIService();
+
+
+
 import navComponent from "../Navigation/Nav.vue";
 import headerComponent from "../Navigation/header";
 import footerComponent from "../Navigation/footer";
 
 export default {
+  name: "Post_item",
+
   data() {
     return {
       form: {
         title: "",
         manu: "",
         type: null,
-        year: null
+        year: null,
+        functional: ""
       },
+      /* the options for the  */
       type: [
         { text: "Select One", value: null },
         "Refrigerators",
@@ -129,19 +144,20 @@ export default {
         "2012",
         "2013",
         "2014",
-        "2014",
-        "2015",
-        "2016",
-        "2017",
-        "2018"
       ],
-
       show: true
     };
   },
 
-  name: "Home",
-
+methods: {
+  onSubmit(){
+  apiService.postProduct().then((data) => {
+    this.form,
+    console.log(data)
+  });
+  
+  }
+},
   components: {
     navComponent,
     headerComponent,

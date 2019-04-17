@@ -9,12 +9,9 @@
       <div id="carousel--info_ads">
         <b-carousel
           id="adverts-more-info"
-          v-model="slide"
-          :interval="3500"
           controls
           indicators
-          @sliding-start="onSlideStart"
-          @sliding-end="onSlideEnd"
+        
         >
           <b-carousel-slide
             class="c-box-1"
@@ -60,12 +57,13 @@
     <!-------------------------------------------------------->
 
   <div id="need-help">
-     <router-link to="/faq" class="link2">
-          <div class="upload-ico icon2">
+          <div class="upload-ico">
             <fa-icon class="upload-icon" icon="question-circle"/>
-            <p class="tradein-upload">Need Help?</p>
+             <router-link to="/faq" class="link2">
+             <p class="tradein-upload">Need Help?</p>
+             </router-link>
           </div>
-        </router-link>
+       
   </div>
 
     <!-- Main  section two - Browsing different categories -->
@@ -160,14 +158,19 @@
 import headerComponent from "../Navigation/header";
 import footerComponent from "../Navigation/footer";
 
+
 export default {
   name: "Home",
 
   components: {
     footerComponent,
     headerComponent
-  }
-};
+  },
+
+  methods: {
+ 
+    }
+  };
 </script>
 
 

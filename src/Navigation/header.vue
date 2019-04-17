@@ -26,14 +26,8 @@
           <b-dropdown-item> SMALL APPLIANCES AND COOKING APPLIANCES</b-dropdown-item>
         </b-dropdown>
 
-        <input
-          type="search"
-          class="search--bar-box"
-          placeholder="Search for a product or parts... "
-        >
-        <div class="search--icon box-2">
-          Search
-          <fa-icon id="search--icon" icon="search"/>
+        <input type="search" class="search--bar-box" placeholder="Search for a product or parts... " >
+        <div class="search--icon box-2"> Search <fa-icon id="search--icon" icon="search"/>
         </div>
       </div>
 
@@ -43,7 +37,7 @@
           <div class="Usr--icon">
             <fa-icon class="faicon" icon="user"/>
           </div>
-          <div class="Usr--name">Username</div>
+          <div class="Usr--name" v-if="user">{{ user.email }}</div>
 
           <div>
             <b-dropdown variant="link" size="lg" no-caret>
@@ -52,18 +46,24 @@
               </template>
 
               <b-dropdown-item>
-                <router-link to="/signin" class="link2">Login</router-link>
+                <router-link to="/signin">Login</router-link>
               </b-dropdown-item>
-              <b-dropdown-item>
+
+              <b-dropdown-item >
                 <router-link to="/signup" class="link2">Register</router-link>
               </b-dropdown-item>
+
               <b-dropdown-item>
                 <router-link to="/post_item" class="link2">Post items</router-link>
               </b-dropdown-item>
+
               <b-dropdown-divider/>
-              <b-dropdown-item>My account</b-dropdown-item>
+
+              <b-dropdown-item>
+                <p v-if="user"> <router-link to="/post_item" class="link2">My account </router-link></p>
+                </b-dropdown-item>
               <b-dropdown-item>Settings</b-dropdown-item>
-              <b-dropdown-item @click="logout">Logout</b-dropdown-item>
+              <b-dropdown-item @click="logout"><a v-if="user">Logout </a></b-dropdown-item>
             </b-dropdown>
           </div>
         </div>
@@ -78,17 +78,40 @@
 </template>
 
 <script>
-const vueonfire = require("../firebaseApp.js");
+import firebase from 'firebase/app';
 
 export default {
+  
+  
+  data () {
+    return {
+      user: null
+    }
+  },
   methods: {
-    logout: function() {
-      vueonfire.auth.signOut().then(() => {
-        this.$router.replace("/signin");
+  
+    logout() {
+      firebase.auth().signOut().then(() => {
+        this.$router.replace("/");
       });
     }
-  }
+  },
+
+ created(){
+  firebase.auth().onAuthStateChanged( (user) => {
+  if(user){
+    this.user = user
+
+    //test user
+    console.log(user);
+    } else {
+    this.user = null
+    }
+  })
+}
 };
+
+
 </script>
 
 

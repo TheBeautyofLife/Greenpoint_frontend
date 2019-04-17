@@ -1,33 +1,37 @@
 /* Main */
-import Home from '@/components/Home'
-const Sign_up = () => import('@/components/Sign_up');
-const Sign_in = () => import('@/components/Sign_in');
+import Vue from 'vue'
+import Router from 'vue-router'
+import firebase from 'firebase/app'
+import store from './store'
 
-const Contact_us = () => import('@/components/Contact_us');
-const FAQ = () => import('@/components/FAQ');
-const Cart = () => import('@/components/Cart');
-const Checkout = () => import('@/components/Checkout');
-const Post_item = () => import('@/components/Post_item');
-const How_it = () => import('@/components/How_it');
+import Home from '@/components/Home'
+import Sign_up from '@/components/Sign_up'
+import Sign_in from '@/components/Sign_in'
+import Contact_us from '@/components/Contact_us'
+import FAQ from '@/components/FAQ'
+import Cart from '@/components/Cart'
+import Checkout from '@/components/Checkout'
+import Post_item from '@/components/Post_item'
+import How_it from '@/components/How_it'
 
 
 /** These are the router for viewing the item by category **/
 
-const Electronic_parts = () => import('./components/View_items_category/Electronic_parts');
+import Electronic_parts from './components/View_items_category/Electronic_parts'
 /*----------IT DEVICES---------*/
-const Main_computer = () => import('@/components/View_items_category/IT/Main_computer');
+import Main_computer from '@/components/View_items_category/IT/Main_computer'
 //Categories
-const Laptops = () => import('@/components/View_items_category/IT/Laptops');
-const Computer_Acc = () => import('@/components/View_items_category/IT/Computer_Acc');
+import Laptops from '@/components/View_items_category/IT/Laptops'
+import Computer_Acc from '@/components/View_items_category/IT/Computer_Acc'
 
 //Subcategories for Laptop
-const MacBooks = () => import('@/components/View_items_category/IT/Laptops/MacBooks');
-const Netbooks = () => import('@/components/View_items_category/IT/Laptops/Netbooks');
+import MacBooks from '@/components/View_items_category/IT/Laptops/MacBooks'
+import Netbooks from '@/components/View_items_category/IT/Laptops/Netbooks'
 
 
 //Subcategories for Computer_Acc
-const Keyboard_mouse = () => import('@/components/View_items_category/IT/Comp_acc/Keyboard_mouse');
-const Monitor = () => import('@/components/View_items_category/IT/Comp_acc/Monitors');
+import Keyboard_mouse from '@/components/View_items_category/IT/Comp_acc/Keyboard_mouse'
+import Monitor from '@/components/View_items_category/IT/Comp_acc/Monitors'
 
 /*----------TV & SOUND devices---------*/
 
@@ -38,9 +42,13 @@ const Monitor = () => import('@/components/View_items_category/IT/Comp_acc/Monit
 
 //Mobile and tablet devices
 
-const routes = [
 
-  {
+Vue.use(Router)
+
+const router = new Router({
+/* linkActiveClass: 'active', */
+mode: 'history',
+routes: [{
     path: '/',
     name: 'Home',
     component: Home
@@ -146,8 +154,26 @@ const routes = [
     component: Monitor
   },
 
-]
+  ]
+})
 
+router.beforeEach((to, from, next) => {
+  //check to see if route requires auth
+  if (to.matched.some(rec => rec.meta.requiresAuth)) {
+    
+    //check auth state of user
+    let user = firebase.auth().currentUser
+    if (user) {
+      //user signed in, proceed to route
+      next()
+    } else {
+      //no user signed in, redirect to login
+      next({ name: 'Signin'})
+    }
 
+  } else {
+    next()
+  }
+})
 
-export default routes;
+export default router

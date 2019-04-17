@@ -1,9 +1,15 @@
 <template>
   <!-- These are the links -->
-  <div class="links">
+  <div id="app">
     <router-view/>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'App',
+  methods:{
 
-
+  }
+}
+</script>

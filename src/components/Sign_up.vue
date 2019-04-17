@@ -113,7 +113,7 @@ data() {
 },
   methods: {
   /** Login in with email and password **/
-  login() {
+  register() {
     firebase.auth().createInWithEmailAndPassword(this.email, this.password).then((user) => { 
       this.$router.replace('/'); 
     }).catch((err) => {

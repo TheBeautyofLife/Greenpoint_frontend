@@ -386,9 +386,12 @@ input:hover {
     position: relative;
     width: 1700px;
     height: 280px;
-    background-color: map-get($colours, primary);
+    background-color: map-get($colours, GP_orange);
     left: 10%;
     top: 20px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 #main-container-others {
@@ -406,9 +409,10 @@ input:hover {
     position: relative;
     width: 1700px;
     height: 400px;
-    background: url(/imgs/bg_2.jpeg);
+   /*  background: url(imgs/bg_2.jpeg); */
+   background-color: map-get($colours,GP_litgreen);
     left: 10%;
-    top: 20px;
+    top: 40px;
 }
 
 /** Top left navigation**/
@@ -523,6 +527,23 @@ input:hover {
     padding-bottom: 1px;
 }
 
+/* Get help and get started  */
+.upload-ico{
+    margin-top: 20px;
+}
+.upload-icon{
+ position: relative;
+ height: 50px;
+ width: 50px;
+ left:40%;
+}
+
+.tradein-upload{
+    font-size: 50px;
+
+}
+
+/* cards category  */
 #category--title {
     display: flex;
     flex-direction: column;
@@ -586,8 +607,17 @@ input:hover {
     color: map-get($colours, GP_drkgreen);
 }
 
+.ver2{
+    margin-left: 5px;
+}
+
 .btn--arrow-right {
     margin-left: 13px;
+}
+
+.btn--arrow-right-pen{
+    margin-left: 9px;
+    width: 10px;
 }
 
 .group2 {
@@ -786,10 +816,10 @@ user can click and go to the required pages ***/
     display: flex;
     position: relative;
     width: 1500px;
-    height: 100%;
+    padding-bottom: 100px;
     background-color: map-get($colours, primary);
     left: 23%;
-    top: -710px;
+    top: -691px;
 }
 
 
@@ -812,7 +842,7 @@ user can click and go to the required pages ***/
 }
 
 .item-cards {
-    height: 450px;
+    height: 500px;
     width: 700px;
     margin: 30px;
     color: map-get($colours, GP_drkgreen);
@@ -823,7 +853,8 @@ user can click and go to the required pages ***/
     flex-direction: row;
     height: 60px;
     width: 14%;
-    background-color: map-get($colours, GP_orange_1);
+    background-color: map-get($colours, GP_orange_2);
+   
     margin: 40px;
     border-top-right-radius: 28px;
     border-bottom-right-radius: 28px;
@@ -835,7 +866,8 @@ user can click and go to the required pages ***/
         font-weight: 500;
         padding: 5px;
         margin-top: 9px;
-        margin-left: 5px;
+        margin-left: 5px; 
+        color: map-get($colours, GP_drkgreen );
     }
 }
 
@@ -849,14 +881,19 @@ user can click and go to the required pages ***/
     align-content: center;
 }
 
-#nav-left {
+#filter-nav-left {
     display: flex;
     position: relative;
-    width: 420px;
+    width: 400px;
     height: 700px;
     background-color: map-get($colours, primary);
     left: 2%;
     top: 9px;
+
+    /* Shadow*/
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
+    box-shadow: 0px 1px 5px 0px rgba(123, 123, 123, 0.300);
 }
 
 

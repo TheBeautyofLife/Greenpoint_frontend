@@ -1,3 +1,6 @@
+import Vue from 'vue';
+import VueAxios from 'vue-axios';
+import VueAuthenicate from 'vue-authenticate'; 
 import axios from 'axios';
 
 /** The api link is constantly changing  **/
@@ -14,14 +17,18 @@ export class APIService {
     }
 
     postProduct() {
-        //post method
+          const url = `${API_URL}/api/getproducts/`;
+          return axios.post(url).then(response => response.data);
     }
 
-    authUser() {
-        //auth method
-    }
+ 
 
 }
+  // This is the x Auth of the users authUser
+   
+  Vue.use(VueAxios, axios)
+
+
 
 /* const cors = require('cors')
 const express = require('express')

@@ -106,6 +106,7 @@
 
 <script>
 import firebase from 'firebase/app'
+import axios from 'axios'
 const vueonfire = require("../firebaseApp.js")
 
 export default {
@@ -143,28 +144,23 @@ export default {
 
     /** Login in with email and password **/
     login() {
-      let email = this.email
-      let password = this.password
-      vueonfire.auth.signInWithEmailAndPassword(
-          this.email,
-          this.password
-        ).then((user) => {
-          this.performingRequest = false;
-          this.$router.replace("/");
-        })
-        .catch((err) => {
-          /** Replace the alert message with the Greenponint alert component and firebase message **/
-          console.log(err);
-          this.performingRequest = false;
-          this.errorMsg = err.message;
-        });
+    /*   const axApi = 
+     if(this.email && this.password){
+       firebase.auth.signInWithEmailAndPassword( this.email , this.password )
+       .then(cred => {
+         //test
+         //console.log(cred.user)
+         this.$router.push ({ name: 'Home'})
+         
+       })
+     } */
     },
 
     /** Replace password **/
     resetPassword() {
       this.performingRequest = true;
 
-      vueonfire.auth.sendPasswordResentEmail(this.passwordForm.email).this(() => {
+      firebase.auth.sendPasswordResentEmail(this.passwordForm.email).this(() => {
           this.performingRequest = false;
           (this.passwordResetSuccess = true), 
           (this.passwordForm.email = "");
