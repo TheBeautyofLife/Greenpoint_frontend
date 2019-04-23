@@ -11,7 +11,8 @@ package-lock.json
 #local environment files
 .env.local
 .env.*.local
-
+.env.env
+.env.env.development
 
 
 # log files
