@@ -184,7 +184,7 @@
         Lorem ipsum dolor sit amet, consectetur... 
        </b-card-text>
 
-       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
+       <b-button class="btn--colour ver2" to=""> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button>
        </b-card>
     <!-- card two -->
      <b-card class="item-cards" 
@@ -194,7 +194,7 @@
        <b-card-text>
         View all laptops, destops and IT accessories you have posted... 
        </b-card-text>
-       <router-link to="#" class="link2"><router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link></router-link>
+       <b-button class="btn--colour ver2" to=""> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button>
      </b-card>
 
      <!-- card three -->
@@ -206,7 +206,7 @@
      <b-card-text class="card-text">
         View all the parts you have Home appliance you posted... 
        </b-card-text>
-       <b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/></b-button>
+       <b-button class="btn--colour ver2" to=""> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/></b-button>
      </b-card>
 
     <!-- card four -->
@@ -217,7 +217,7 @@
      <b-card-text>
         View all the parts you have posted, modify posts... 
      </b-card-text>
-       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
+     <b-button class="btn--colour ver2" to="" > Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button>
      </b-card>
   </b-card-group>
   </div>
@@ -235,7 +235,7 @@
         Lorem ipsum dolor sit amet, consectetur... 
        </b-card-text>
 
-       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
+       <b-button class="btn--colour ver2" to=""> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button>
        </b-card>
     <!-- card two -->
      <b-card class="item-cards" 
@@ -245,7 +245,7 @@
        <b-card-text>
         View all laptops, destops and IT accessories you have posted... 
        </b-card-text>
-       <router-link to="#" class="link2"><router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link></router-link>
+     <b-button class="btn--colour ver2" to=""> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link></router-link>
      </b-card>
 
      <!-- card three -->
@@ -257,7 +257,7 @@
      <b-card-text class="card-text">
         View all the parts you have Home appliance you posted... 
        </b-card-text>
-       <b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/></b-button>
+       <b-button class="btn--colour ver2" to=""> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/></b-button>
      </b-card>
 
     <!-- card four -->
@@ -268,7 +268,7 @@
      <b-card-text>
         View all the parts you have posted, modify posts... 
      </b-card-text>
-       <router-link to="#" class="link2"><b-button class="btn--colour ver2"> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
+       <b-button class="btn--colour ver2" to=""> Update <fa-icon class="btn--arrow-right-pen" icon="pen"/> </b-button></router-link>
      </b-card>
   </b-card-group>
   </div>

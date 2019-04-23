@@ -1,10 +1,6 @@
 import * as firebase from 'firebase/app'
-import store from './store'
 import 'firebase/auth'
-import 'firebase/firestore'
 import'firebase/database'
-
-
 
 
 const config = {
@@ -15,19 +11,6 @@ const config = {
     storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
 }
-  const firebaseApp = firebase.initializeApp(config)
-  const db = firebaseApp.database()
-  const auth = firebase.auth()
-  const currentUser = auth.currentUser
+firebase.initializeApp(config)
 
-
-//test
-
-       
-
-
-export default {
-    dataB,
-    auth,
-    currentUser,
-}
+  

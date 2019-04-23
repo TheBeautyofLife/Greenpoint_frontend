@@ -59,7 +59,7 @@
   <div id="need-help">
           <div class="upload-ico">
             <fa-icon class="upload-icon" icon="question-circle"/>
-             <router-link to="/faq" class="link2">
+             <router-link to="/info/faq" class="link2">
              <p class="tradein-upload">Need Help?</p>
              </router-link>
           </div>
@@ -141,7 +141,7 @@
     </div>
     <div id="get-started">
       <h1 class="titleGT">Get Started</h1>
-      <router-link to="/how_it" class="link2">
+      <router-link to="/info/how_it" class="link2">
           <div class="upload-ico icon1">
             <p class="tradein-upload">Get Started</p>
           </div>
@@ -168,7 +168,15 @@ export default {
   },
 
   methods: {
- 
+/*  if (user != null) {
+  user.providerData.forEach(function (profile) {
+    console.log("Sign-in provider: " + profile.providerId);
+    console.log("  Provider-specific UID: " + profile.uid);
+    console.log("  Name: " + profile.displayName);
+    console.log("  Email: " + profile.email);
+    console.log("  Photo URL: " + profile.photoURL);
+  });
+} */
     }
   };
 </script>

@@ -1,16 +1,11 @@
 // Import Vue and BootstrapVue
 import Vue from 'vue'
-//import VueRouter from 'vue-router';
 import BootstrapVue from 'bootstrap-vue'
-import firebase from 'firebase/app'
-
-
-// Import Vue App, routes, store
 import App from './App'
 import router from './router'
 
-Vue.config.productionTip = false;
-//Vue.use(VueRouter);
+Vue.use(BootstrapVue);
+Vue.config.productionTip = false
 
 // Font awesome library
 import {
@@ -36,35 +31,11 @@ library.add(faFacebookF, faTwitter, faGoogle, faInstagram,
   faSmile, faQuestionCircle, faKeyboard, faCheckCircle, faArrowRight,faPen);
 
 config.autoAddCss = true;
-
 Vue.component('fa-icon', FontAwesomeIcon);
 
-Vue.use(BootstrapVue);
-
  
-
-/*const router = new VueRouter({
-  routes,
-  linkActiveClass: 'active',
-  mode: 'history'
-}); 
-
-
 new Vue({
   el: '#app',
+  router,
   render: h => h(App),
- ,
-});*/
-
-let app = null;
-
-
-firebase.auth().onAuthStateChanged(() => {
-  if (!app) {
-    app = new Vue({
-      el: '#app',
-      router,
-      render: h => h(App)
-    })
-  }
 })

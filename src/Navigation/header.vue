@@ -35,9 +35,8 @@
         <!-- This is the section where the users icon will appear-->
         <div id="active--user-icon">
           <div class="Usr--icon">
-            <fa-icon class="faicon" icon="user"/>
+            <span class="faicon"> <!-- {{ user.photoURL }} --></span>
           </div>
-          <div class="Usr--name" v-if="user">{{ user.email }}</div>
 
           <div>
             <b-dropdown variant="link" size="lg" no-caret>
@@ -90,25 +89,13 @@ export default {
   },
   methods: {
   
-    logout() {
+   /*  logout() {
       firebase.auth().signOut().then(() => {
         this.$router.replace("/");
       });
-    }
+    } */
   },
 
- created(){
-  firebase.auth().onAuthStateChanged( (user) => {
-  if(user){
-    this.user = user
-
-    //test user
-    console.log(user);
-    } else {
-    this.user = null
-    }
-  })
-}
 };
 
 

@@ -1,8 +1,7 @@
 /* Main */
 import Vue from 'vue'
 import Router from 'vue-router'
-import firebase from 'firebase/app'
-import store from './store'
+
 
 import Home from '@/components/Home'
 import Sign_up from '@/components/Sign_up'
@@ -34,7 +33,7 @@ import Keyboard_mouse from '@/components/View_items_category/IT/Comp_acc/Keyboar
 import Monitor from '@/components/View_items_category/IT/Comp_acc/Monitors'
 
 /*----------TV & SOUND devices---------*/
-
+import Main_appliances from '@/components/View_items_category/Appliances/Main_appliances'
 
 /*----------MOBILE DEVICES---------*/
 
@@ -45,9 +44,7 @@ import Monitor from '@/components/View_items_category/IT/Comp_acc/Monitors'
 
 Vue.use(Router)
 
-const router = new Router({
-/* linkActiveClass: 'active', */
-mode: 'history',
+export default new Router({
 routes: [{
     path: '/',
     name: 'Home',
@@ -73,7 +70,7 @@ routes: [{
   },
 
   {
-    path: '/faq',
+    path: '/info/faq',
     name: 'Faq',
     component: FAQ
   },
@@ -91,13 +88,13 @@ routes: [{
   },
 
   {
-    path: '/post_item',
+    path: '/producer/post_item',
     name: 'Post_item',
     component: Post_item
   },
 
   {
-    path: '/how_it',
+    path: '/info/how_it',
     name: 'How_it',
     component: How_it
   },
@@ -105,19 +102,19 @@ routes: [{
 
   /* view items by category */
   {
-    path: '/home/other',
+    path: '/home/producers/other',
     name: 'Electronic_parts',
     component: Electronic_parts
   },
 
   {
-    path: '/home/computer',
+    path: '/home/producers/computer',
     name: 'Main_computer',
     component: Main_computer
   },
 
   {
-    path: '/home/computer/laptops', //Category laptop
+    path: '/home//producers/computer/laptops', //Category laptop
     name: 'Laptops',
     component: Laptops
   },
@@ -154,10 +151,12 @@ routes: [{
     component: Monitor
   },
 
-  ]
+  ],
+
+  mode: 'history',
 })
 
-router.beforeEach((to, from, next) => {
+/* router.beforeEach((to, from, next) => {
   //check to see if route requires auth
   if (to.matched.some(rec => rec.meta.requiresAuth)) {
     
@@ -174,6 +173,5 @@ router.beforeEach((to, from, next) => {
   } else {
     next()
   }
-})
+}) */
 
-export default router

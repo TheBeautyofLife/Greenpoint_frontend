@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import VueAxios from 'vue-axios';
-import VueAuthenicate from 'vue-authenticate'; 
+//import VueAxios from 'vue-axios';
+//import VueAuthenicate from 'vue-authenticate'; 
 import axios from 'axios';
 
 /** The api link is constantly changing  **/
@@ -26,7 +26,7 @@ export class APIService {
 }
   // This is the x Auth of the users authUser
    
-  Vue.use(VueAxios, axios)
+ // Vue.use(VueAxios, axios)
 
 
 
