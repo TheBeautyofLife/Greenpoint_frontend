@@ -7,8 +7,8 @@
       </div>
     </transition>
 
-    <div class="logo--top logo-size">
-      <img src="../assets/imgs/_logo.png" alt="Greenpoint" class="logo">
+    <div id="logo--top">
+      <img src="../../assets/imgs/_logo.png" alt="Greenpoint" class="logo">
     </div>
     <div class="headers-main">
       <div class="page--title">
@@ -19,8 +19,8 @@
 
     <!-- Main Section -->
     <!-- Section One-->
-    <div id="form--container">
-      <div id="Section" class="sec-1">
+    <div id="form--container-2">
+      <div id="Section" class="sec-01">
         <!--The form starts here -->
         <form v-if="showLoginForm" id="register" @submit.prevent="signin">
           <div id="reg-card">
@@ -41,8 +41,8 @@
         
         
         <div class="extra-tools">
-          <a class="link2" @click="togglePasswordReset">Forgot password</a>
-          <router-link to="/signup" class="link2">Create an Account</router-link>
+          <a id="link-for-signin" @click="togglePasswordReset"> Forgot password</a>
+          <router-link to="/signup" id="link-for-signin" class="ndChild" > Create an Account</router-link>
         </div>
 
         </form>
@@ -51,20 +51,20 @@
       </div>
 
       <!--Reset password form this will redirect to the popup page when the  -->
-      <form v-if="showForgotPassword" class="password-reset">
+      <form v-if="showForgotPassword" class="sec-01 resetpassword">
         <div v-if="!passwordResetSuccess">
           <h1 class="sub--title">Reset Password</h1>
           <p class="info">Hey we will send you an email to reset your password</p>
 
           <lable class="decription" for="email2">Email</lable>
-          <input type="text" placeholder="you@email.com" v-model="passwordForm.email" />
+          <input type="text" placeholder="you@email.com" v-model="passwordForm.email" class="usr--email"/>
 
           <div id="submit--bttn">
-            <button class="submit" @click="resetPassword" form="reset" value="Submit">Reset</button>
+            <button class="resetpassword-btn" @click="resetPassword" form="reset" value="Submit">Reset</button>
           </div>
 
           <div class="extar-tools">
-            <a @click="togglePasswordReset">Back to login</a>
+            <a id="link-for-signin" @click="togglePasswordReset"> <fa-icon icon="chevron-left" class="back-icon"/>  Back to login</a>
           </div>
         </div>
         <div v-else>
@@ -83,18 +83,18 @@
 <!--------------------->
 
       <!-- Section Two-->
-      <div id="Section" class="sec-2">
-        <div class="vertical-line"></div>
+      <div id="Section" class="sec-02">
+        <div class="vertical-line-1"></div>
         <p class="center--txt">Or</p>
-        <div class="vertical-line"></div>
+        <div class="vertical-line-1"></div>
       </div>
 
       <!-- Section Two-->
-      <div id="Section" class="sec-3">
+      <div id="Section" class="sec-03">
         <div class="social-signup-buttons">
           <h2 class="sub--title">With</h2>
           <button @click="SocialMedia" id="social-butts google_g">
-            <fa-icon class="social-icons" :icon="['fab','google']"/>Sign in with Google
+            <fa-icon class="social-icons" :icon="['fab','google']"/> Sign in with Google
           </button>
         </div>
       </div>
@@ -107,7 +107,6 @@
 <script>
 import firebase from 'firebase/app'
 import axios from 'axios'
-const vueonfire = require("../firebaseApp.js")
 
 export default {
   name: 'login',
@@ -144,16 +143,7 @@ export default {
 
     /** Login in with email and password **/
     login() {
-    /*   const axApi = 
-     if(this.email && this.password){
-       firebase.auth.signInWithEmailAndPassword( this.email , this.password )
-       .then(cred => {
-         //test
-         //console.log(cred.user)
-         this.$router.push ({ name: 'Home'})
-         
-       })
-     } */
+   
     },
 
     /** Replace password **/
@@ -191,5 +181,5 @@ export default {
 
 
 <style lang="scss">
-@import "../assets/css/_signup-login-home.scss";
+@import "../../assets/css/_signup-login-home.scss";
 </style>

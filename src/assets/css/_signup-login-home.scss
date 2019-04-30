@@ -20,40 +20,47 @@ body {
     height: 100vh; //100% view height
     width: 100vw; // 100% view width
     overflow: hidden;
-    height: 1080px;
 }
 
 /*********** Register ************/
 
-.logo--top img {
-    position: absolute;
-    width: 154px;
-    height: 130px;
+#logo--top{
+    position: relative;
+    max-width: 160px;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
     left: 50%;
+
+    .logo {
+    max-width: 154px;
     margin-top: 30px;
 }
+}
 
-#form--container {
+
+
+#form--container-2 {
     display: flex;
+    position: relative;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
     margin: 0;
     padding: 0;
-    position: relative;
-    top: 220px;
+    top: 130px;
     left: 24%;
     max-width: 1200px;
 }
 
-.sec-1 {
+.sec-01 {
     flex-direction: column;
     align-content: center;
     align-items: center;
     justify-content: center;
 }
 
-.sec-3 {
+.sec-03 {
     display: flex;
     flex-direction: column;
     right: 20px;
@@ -67,12 +74,12 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    top: 190px;
+    top: 30px;
     left: 24%;
 }
 
 //buttons
-button {
+ button {
     border-style: none;
     height: 60px;
     width: 500px;
@@ -105,7 +112,7 @@ input {
     width: 500px;
     background-color: map-get($colours, GP_litgreen_2);
     margin: 15px;
-    padding: 2px;
+    padding: 30px;
     left: 0;
 }
 
@@ -153,7 +160,7 @@ span .line-center {
 }
 
 //vertical line
-.vertical-line {
+.vertical-line-1 {
     display: block;
     height: 300px;
     border-left: 1px solid;
@@ -175,5 +182,36 @@ span .line-center {
     height: 25px !important;
     margin-right: 30px;
 }
+
+#reg-card {
+    padding: 10px;
+}
+
+#link-for-signin {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: 'Muli', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: map-get($colours, GP_orange );
+
+}
+#link-for-signin:hover{
+    color: map-get($colours, GP_litgreen);
+}
+
+.ndChild {
+    margin-left: 20px;
+}
+
+
+//reset passwor form
+.resetpassword-btn{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  width: 120px;
+    }
+
 
 /******--------------------------------********/

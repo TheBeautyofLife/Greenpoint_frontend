@@ -4,7 +4,7 @@
   <header class="head--container">
     <div class="greenpoint-logo">
       <router-link to="/">
-        <img src="../assets/imgs/_logo.png" class="logo logo--size">
+        <img src="../../assets/imgs/_logo.png" class="logo logo--size">
       </router-link>
     </div>
 
@@ -36,16 +36,13 @@
         <div id="active--user-icon">
           <div class="Usr--icon">
             <span class="faicon"> <!-- {{ user.photoURL }} --></span>
+            <p v-if="user"> Hello <!--{{ user.email }} --></p>
           </div>
 
-          <div>
-            <b-dropdown variant="link" size="lg" no-caret>
-              <template class="drpdwn-usermenu" slot="button-content">
-                <fa-icon class="drp-dwn-icon" icon="chevron-down"></fa-icon>
-              </template>
-
+          <div id="dropdwn-size">
+            <b-dropdown variant="link" size="sm" no-caret class="hovered-dpn">
               <b-dropdown-item>
-                <router-link to="/signin">Login</router-link>
+                <router-link to="/signin" class="link2">Login</router-link>
               </b-dropdown-item>
 
               <b-dropdown-item >
@@ -56,13 +53,13 @@
                 <router-link to="/post_item" class="link2">Post items</router-link>
               </b-dropdown-item>
 
-              <b-dropdown-divider/>
+              <b-dropdown-divider/> 
 
               <b-dropdown-item>
-                <p v-if="user"> <router-link to="/post_item" class="link2">My account </router-link></p>
+                <router-link to="/post_item" class="link2">My account </router-link>
                 </b-dropdown-item>
               <b-dropdown-item>Settings</b-dropdown-item>
-              <b-dropdown-item @click="logout"><a v-if="user">Logout </a></b-dropdown-item>
+              <b-dropdown-item >Logout</b-dropdown-item>
             </b-dropdown>
           </div>
         </div>
@@ -104,7 +101,30 @@ export default {
 
 
 <style lang="scss">
-@import "../assets/css/_master.scss";
+@import "../../assets/css/_master.scss";
+
+.user--container{
+    margin-top: -96px;
+}
+
+.hovered-dpn {
+  width: 30px;
+  border-style: none;
+  background:none;
+  box-shadow: none;
+}
+
+.hovered-dpn:hover button, .hovered-dpn:active button, .hovered-dpn:focus button{
+  width: 30px;
+  border-style: none;
+  background:none;
+  box-shadow: none;
+}
+
+.search--bar-box,.search--bar-box:hover,  .search--bar-box:focus{
+  border:none;
+  border-radius: 0;
+}
 </style>
 
 

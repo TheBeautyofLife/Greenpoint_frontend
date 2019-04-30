@@ -1,39 +1,56 @@
 /* Main */
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from 'vue';
+import Router from 'vue-router';
 
 
-import Home from '@/components/Home'
-import Sign_up from '@/components/Sign_up'
-import Sign_in from '@/components/Sign_in'
-import Contact_us from '@/components/Contact_us'
-import FAQ from '@/components/FAQ'
-import Cart from '@/components/Cart'
-import Checkout from '@/components/Checkout'
-import Post_item from '@/components/Post_item'
-import How_it from '@/components/How_it'
+import Home from '@/views/Home.vue';
+
+//User components
+import Sign_up from '@/views/User/Sign_up';
+import Sign_in from '@/views/User/Sign_in';
+import Account from '@/views/User/Account';
+
+//information
+import Contact_us from '@/views/Information/Contact_us';
+import FAQ from '@/views/Information/FAQ';
+import How_it from '@/views/Information/How_it';
+
+
+//producers portal
+import Post_item from '@/views/portals/Producers/Post_item.vue';
+import items_collected from '@/views/portals/Producers/items_collected';
+import Track_order from '@/views/portals/Producers/Track_order';
+
+//buyers portal
+import Cart from '@/views/portals/Buyers/Cart.vue';
+import Checkout from '@/views/portals/Buyers//Checkout';
+
+
+
+
 
 
 /** These are the router for viewing the item by category **/
 
-import Electronic_parts from './components/View_items_category/Electronic_parts'
+import Electronic_parts from '@/views/View_items_category/Electronic_parts';
 /*----------IT DEVICES---------*/
-import Main_computer from '@/components/View_items_category/IT/Main_computer'
+const Main_computer = () => import ('@/views/View_items_category/IT/Main_computer.vue');
 //Categories
-import Laptops from '@/components/View_items_category/IT/Laptops'
-import Computer_Acc from '@/components/View_items_category/IT/Computer_Acc'
+const Laptops = () => import('@/views/View_items_category/IT/Laptops');
+import Computer_Acc from '@/views/View_items_category/IT/Computer_Acc';
 
 //Subcategories for Laptop
-import MacBooks from '@/components/View_items_category/IT/Laptops/MacBooks'
-import Netbooks from '@/components/View_items_category/IT/Laptops/Netbooks'
+import MacBooks from '@/views/View_items_category/IT/Laptops/MacBooks';
+import Netbooks from '@/views/View_items_category/IT/Laptops/Netbooks';
 
 
 //Subcategories for Computer_Acc
-import Keyboard_mouse from '@/components/View_items_category/IT/Comp_acc/Keyboard_mouse'
-import Monitor from '@/components/View_items_category/IT/Comp_acc/Monitors'
+import Keyboard_mouse from '@/views/View_items_category/IT/Comp_acc/Keyboard_mouse';
+import Monitor from '@/views/View_items_category/IT/Comp_acc/Monitors';
 
 /*----------TV & SOUND devices---------*/
-import Main_appliances from '@/components/View_items_category/Appliances/Main_appliances'
+
+
 
 /*----------MOBILE DEVICES---------*/
 
@@ -42,7 +59,7 @@ import Main_appliances from '@/components/View_items_category/Appliances/Main_ap
 //Mobile and tablet devices
 
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
 routes: [{
@@ -108,13 +125,13 @@ routes: [{
   },
 
   {
-    path: '/home/producers/computer',
+    path: '/home/computer',
     name: 'Main_computer',
     component: Main_computer
   },
 
   {
-    path: '/home//producers/computer/laptops', //Category laptop
+    path: '/home/computer/laptops', //Category laptop
     name: 'Laptops',
     component: Laptops
   },

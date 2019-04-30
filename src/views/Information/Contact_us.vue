@@ -79,8 +79,8 @@
 </template>
 
 <script>
-import headerComponent from '../Navigation/header'
-import footerComponent from '../Navigation/footer'
+import headerComponent from '../../components/Navigation/header'
+import footerComponent from '../../components/Navigation/footer'
 
     export default {
         name: '/contactus',
@@ -94,5 +94,5 @@ import footerComponent from '../Navigation/footer'
 
 
 <style lang="scss">
-@import "../assets/css/_faq_support.scss"
+@import "../../assets/css/_faq_support.scss"
 </style>

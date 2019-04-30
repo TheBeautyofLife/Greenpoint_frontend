@@ -107,7 +107,7 @@ body {
 
 .search--bar-box:focus {
     outline: none;
-
+    border-style: none;
 }
 
 input::placeholder {
@@ -163,14 +163,13 @@ input:hover {
 
 #active--user-icon {
     display: flex;
-    position: absolute;
+    position: relative;
     flex-direction: row;
     justify-content: center;
-    align-content: center;
     align-items: center;
-    max-width: 250px;
-    left: 84%;
-    top: 2%;
+    max-width: 0px;
+    left: 160%;
+    right: 0;
 }
 
 .drp-dwn-icon {
@@ -207,6 +206,16 @@ input:hover {
 
 .drpdwn-usermenu {
     color: map-get($colours, GP_drkgreen);
+}
+
+#dropdwn-size{
+ width: 90px;
+}
+
+.hovered-dpn:hover,
+.hovered-dpn:focus {
+    width: 90px;
+    background: none;
 }
 
 
@@ -602,7 +611,8 @@ input:hover {
     border-radius: 19px;
     border-style: none;
     width: 150px;
-    background-color: map-get($colours, GP_orange_2);
+    height: 40px;
+    background-color: map-get($colours, primary);
     font-size: 1.2em;
     color: map-get($colours, GP_drkgreen);
 }

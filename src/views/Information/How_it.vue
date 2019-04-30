@@ -89,8 +89,8 @@
 
 
 <script>
-import headerComponent from "../Navigation/header";
-import footerComponent from "../Navigation/footer";
+import headerComponent from "../../components/Navigation/header";
+import footerComponent from "../../components/Navigation/footer";
 
 export default {
   name: "How_it",
@@ -104,5 +104,5 @@ export default {
 
 
 <style lang="scss">
-@import "../assets/css/_master.scss";
+@import "../../assets/css/_master.scss";
 </style>

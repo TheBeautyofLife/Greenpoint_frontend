@@ -16,11 +16,11 @@
 
 <script>
     export default {
-        name: 'Cart'
+        name: 'Checkout'
     }
 </script>
 
 
 <style lang="scss">
-@import "../assets/css/_master.scss"
+@import "../../../assets/css/_master.scss"
 </style>

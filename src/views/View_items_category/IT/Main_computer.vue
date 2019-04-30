@@ -285,10 +285,10 @@
 
 <script>
 
-import headerComponent from '../../../Navigation/header'
-import footerComponent from '../../../Navigation/footer'
-import filternavComponent from '../../../Navigation/computer-filter/filter-nav'
-import breadcrumbComponent from '../../../Navigation/computer-filter/breadcrumb';
+import headerComponent from '../../../components/Navigation/header'
+import footerComponent from '../../../components/Navigation/footer'
+import filternavComponent from '../../../components/Navigation/computer-filter/filter-nav'
+import breadcrumbComponent from '../../../components/Navigation/computer-filter/breadcrumb';
 
 
     export default {

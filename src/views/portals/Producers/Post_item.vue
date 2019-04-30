@@ -83,16 +83,16 @@
 
 <script>
 import axios from 'axios';
-import {APIService} from '../APIservice';
+//import {APIService} from '../APIservice';
 
-const API_URL = 'http://3622174d.ngrok.io';
-const apiService = new APIService();
+//const API_URL = 'http://3622174d.ngrok.io';
+//const apiService = new APIService();
 
 
 
-import navComponent from "../Navigation/Nav.vue";
-import headerComponent from "../Navigation/header";
-import footerComponent from "../Navigation/footer";
+import navComponent from "../../../components/Navigation/Nav";
+import headerComponent from "../../../components/Navigation/header";
+import footerComponent from "../../../components/Navigation/footer";
 
 export default {
   name: "Post_item",
@@ -168,5 +168,5 @@ methods: {
 
 
 <style lang="scss">
-@import "../assets/css/post_view.scss";
+@import "../../../assets/css/post_view.scss";
 </style>
