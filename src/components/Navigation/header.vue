@@ -35,31 +35,31 @@
         <!-- This is the section where the users icon will appear-->
         <div id="active--user-icon">
           <div class="Usr--icon">
-            <span class="faicon"> <!-- {{ user.photoURL }} --></span>
-            <p v-if="user"> Hello <!--{{ user.email }} --></p>
+            <span class="faicon"> <!-- {{ users.photoURL }} --></span> 
           </div>
-
+          <p class="Usr--name" v-if="!auth"> {{ email }} </p>
           <div id="dropdwn-size">
             <b-dropdown variant="link" size="sm" no-caret class="hovered-dpn">
-              <b-dropdown-item>
+              <template slot="button-content"><fa-icon icon="chevron-down" class="drop-icon"/></template>
+              <b-dropdown-item v-if="!auth">
                 <router-link to="/signin" class="link2">Login</router-link>
               </b-dropdown-item>
 
-              <b-dropdown-item >
+              <b-dropdown-item v-if="!auth">
                 <router-link to="/signup" class="link2">Register</router-link>
               </b-dropdown-item>
 
-              <b-dropdown-item>
+              <b-dropdown-item v-if="!auth">
                 <router-link to="/post_item" class="link2">Post items</router-link>
               </b-dropdown-item>
 
               <b-dropdown-divider/> 
 
-              <b-dropdown-item>
+              <b-dropdown-item v-if="!auth">
                 <router-link to="/post_item" class="link2">My account </router-link>
                 </b-dropdown-item>
-              <b-dropdown-item>Settings</b-dropdown-item>
-              <b-dropdown-item >Logout</b-dropdown-item>
+              <b-dropdown-item v-if="!auth">Settings</b-dropdown-item>
+              <b-dropdown-item @click="onLogout"> Logout</b-dropdown-item>
             </b-dropdown>
           </div>
         </div>
@@ -74,26 +74,49 @@
 </template>
 
 <script>
-import firebase from 'firebase/app';
+import axios from '../../auth.js'
+
 
 export default {
-  
-  
-  data () {
+
+   data () {
     return {
-      user: null
+      email: '',
     }
   },
-  methods: {
-  
-   /*  logout() {
-      firebase.auth().signOut().then(() => {
-        this.$router.replace("/");
-      });
-    } */
-  },
+  //created () {
+    
+    //this.$store.fetchUser.
+   /* axios.get('http://localhost:3030/users')
+    .then(res => {
+      console.log(res)
+      const data = res.data
+      const users = []
+      for(let key in data){
+        const user = data[key]
+        user.id = key
+        users.push(user)
+      }
+      console.log(users)
+      this.email = users[1].email
+      })
+    .catch( error => console.log(error))*/
+  //}, 
 
-};
+  computed: {
+
+      auth () {
+        return this.$store.getters.isAuthenticated
+      }
+  },
+ 
+  methods: {
+   onLogout() {
+        this.$store.dispatch('logout')
+      }
+    }
+
+  };
 
 
 </script>

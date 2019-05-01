@@ -2,8 +2,14 @@
 import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
 import App from './App';
-import router from './router';
+import axios from 'axios'
 import * as firebase from 'firebase/app';
+
+
+import router from './router';
+import { store } from './store';
+
+
 
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false
@@ -35,6 +41,7 @@ Vue.component('fa-icon', FontAwesomeIcon);
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App),
 
   created () {
@@ -45,10 +52,15 @@ new Vue({
       databaseURL: process.env.FIREBASE_DATABASE_URL,
       storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
       messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
-      })
+      });
    }
-})
+});
 
 
+
+
+axios.defaults.baseURL = process.env.FIREBASE_DATABASE_URL;
+// axios.defaults.headers.common['Authorization'] = 'fasfdsa'
+axios.defaults.headers.get['Accepts'] = 'application/json';
 
 

@@ -139,6 +139,10 @@ input:hover {
     height: 17px;
     color: map-get($colours, primary);
 }
+.drop-icon{
+    height: 20px;
+    color: map-get($colours, GP_drkgreen );
+}
 
 #search--icon {
     margin-left: 0;
@@ -196,8 +200,13 @@ input:hover {
 }
 
 .Usr--name {
-    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    color: map-get($colours, GP_drkgreen );
+    width: 130px;
 }
+
 
 .faicon {
     height: 75px;
@@ -212,11 +221,6 @@ input:hover {
  width: 90px;
 }
 
-.hovered-dpn:hover,
-.hovered-dpn:focus {
-    width: 90px;
-    background: none;
-}
 
 
 /* Navigation */
@@ -395,7 +399,7 @@ input:hover {
     position: relative;
     width: 1700px;
     height: 280px;
-    background-color: map-get($colours, GP_orange);
+    background-color: map-get($colours, primary);
     left: 10%;
     top: 20px;
     justify-content: center;

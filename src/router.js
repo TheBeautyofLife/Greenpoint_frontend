@@ -1,7 +1,7 @@
 /* Main */
 import Vue from 'vue';
 import Router from 'vue-router';
-
+import { store } from './store'
 
 import Home from '@/views/Home.vue';
 
@@ -107,7 +107,15 @@ routes: [{
   {
     path: '/producer/post_item',
     name: 'Post_item',
-    component: Post_item
+    component: Post_item,
+
+     beforeEnter(to, from, next) {
+       if (store.state.idToken) {
+         next()
+       } else {
+         next('/signin')
+       }
+     }
   },
 
   {

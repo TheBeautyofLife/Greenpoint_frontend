@@ -22,7 +22,7 @@
     <div id="form--container-2">
       <div id="Section" class="sec-01">
         <!--The form starts here -->
-        <form v-if="showLoginForm" id="register" @submit.prevent="signin">
+        <form v-if="showLoginForm" id="register" @submit.prevent="onSignin">
           <div id="reg-card">
             <label class="descrption" for="email">Email</label>
             <br>
@@ -35,15 +35,21 @@
             <input type="password" v-model="password" class="usr--password toggle-pass" placeholder="********" />
           </div>
 
+          <div id="reg-card">
+              <p>{{ feedback }}</p>
+          </div>
           <div id="submit--bttn">
-            <button type="submit" class="submit" @click="login" form="register" value="Submit">Login</button>
+            <button type="submit" class="submit" form="register" value="Submit">Login</button>
           </div>
         
+
         
         <div class="extra-tools">
           <a id="link-for-signin" @click="togglePasswordReset"> Forgot password</a>
           <router-link to="/signup" id="link-for-signin" class="ndChild" > Create an Account</router-link>
         </div>
+
+
 
         </form>
 
@@ -105,15 +111,13 @@
 
 
 <script>
-import firebase from 'firebase/app'
-import axios from 'axios'
-
 export default {
   name: 'login',
   data() {
     return {
       email: '',
       password: '',
+      feedback: '',
       passwordForm: {
       email: ''
       },
@@ -142,9 +146,14 @@ export default {
     },
 
     /** Login in with email and password **/
-    login() {
-   
-    },
+    onSignin()  {
+        const formData = {
+          email: this.email,
+          password: this.password,
+        }
+        console.log(formData)
+        this.$store.dispatch('login', {email: formData.email, password: formData.password})
+      },
 
     /** Replace password **/
     resetPassword() {

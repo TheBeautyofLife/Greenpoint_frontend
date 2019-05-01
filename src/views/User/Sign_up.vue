@@ -17,7 +17,7 @@
     <div id="form--container-2">
       <div id="Section" class="sec-01">
         <!--The form starts here -->
-        <form v-if="showSignupForm" id="register" @submit.prevent="onSubmit">
+        <form v-if="showSignupForm" id="register" @submit.prevent="onSignup">
           <div id="reg-card">
             <label class="descrption" for="name">Full name</label>
             <br>
@@ -33,20 +33,30 @@
             <br>
             <input type="text" v-model="phone" name="phone" class="usr--phone">
           </div>
-
+          <div id="reg-card">
+            <b-form-group label="What is your purpose?">
+            <b-form-radio v-model="selected" name="Producer-radios" value="Producer"> To Post my e-waste (ie old phones, tvs etc)</b-form-radio>
+            <b-form-radio v-model="selected" name="Buyer-radios" value="Buyer">To Buy e-waste</b-form-radio>
+            </b-form-group>
+            </div>
           
 
           <div id="reg-card">
             <label class="descrption" for="create-password">Create a Password</label>
             <br>
-            <input type="password" v-model="password" placeholder="Minimum 6 characters" name="create-password" class="usr--password toggle-pass"/>
+            <input type="password" v-model="password" placeholder="***********" name="create-password" class="usr--password toggle-pass"/>
           </div>
 
-            <div id="reg-card">
+          <div id="reg-card">
             <label class="descrption" for="confirm-password">Confirm Password</label>
             <br>
-            <input type="password" v-model="confirmPassword" placeholder="Minimum 6 characters" name="confirm-password" class="usr--cpassword " required/>
+            <input type="password" v-model="confirmPassword" placeholder=" " name="confirm-password" class="usr--cpassword " />
           </div>
+          
+          <div id="reg-card">
+              <p>{{ feedback }}</p>
+          </div>
+
 
           <div id="submit--bttn">
             <button type="submit" class="submit" form="register" value="Submit">Sign Up</button>
@@ -80,11 +90,6 @@
 </template>
 
 <script>
-  import axios from 'axios';
-
-  const baseURL = 'http://localhost:3030/users';
-
-
 export default {
   name: 'Signup',
 data() {
@@ -93,32 +98,31 @@ data() {
     email: '',
     phone:'',
     password:'',
+    selected: '',
+    feedback: '',
     confirmPassword: '',
     showSignupForm: true,
     performRequest: false
     }
 },
+computed: {
+  
+},
   methods: {
   /** Login in with email and password **/
-  onSubmit() {
-    const formData = {
-    fullname: this.fullname,
-    email: this.email,
-    phone: this.phone,
-    password: this.password,
-    confirmPassword: this.confirmPassowrd
-    }
-  console.log(formData);
-  axios.post(baseURL, formData).then(res => console.log(res))
-  .catch(error => console.log(error))
+  onSignup() {
+  {
+        const formData = {
+          fullname: this.fullname,
+          phone:this.phone,
+          email: this.email,
+          password: this.password,
+          confirmPassword: this.confirmPassword,
+        }
+        console.log(formData)
 
-  /*   firebase.auth().createInWithEmailAndPassword(this.email, this.password).then((user) => { 
-      this.$router.replace('/'); 
-    }).catch((err) => {
-      console.log(err)
-      this.performingRequest = false
-      this.errorMsg = err.message
-    }) */
+        this.$store.dispatch('signup', formData)
+      }
   },
          
     /** Login in with social media **/
@@ -126,13 +130,13 @@ data() {
     const GoogleProvider = new firebase.auth().GoogleAuthProvider();
 
    firebase.auth().signInWithPopup(GoogleProvider).then((results) => {
-          console.log(results)
-          this.$router.replace("/");
-        }).catch((err) => {
-          console.log(err)
-          this.errorMsg = err.message
-         })
-        }
+    console.log(results)
+    this.$router.replace("/");
+    }).catch((err) => {
+      console.log(err)
+      this.errorMsg = err.message
+    })
+  }
 }
 }
 </script>
